@@ -115,11 +115,12 @@ export const standings = {
     { pos: 7, club: '', team: 'NAYUKI',   p: 5, w: 2, d: 0, l: 3, gf: 133, ga: 122, gd: 11, pts: 4 },
     { pos: 8, club: '', team: 'KISII',  p: 5, w: 2, d: 0, l: 3, gf: 57, ga: 90, gd: -33, pts: 4 },
     { pos: 9, club: '', team: 'NYS', p: 2, w: 1, d: 0, l: 1, gf: 47, ga: 48, gd: -1, pts: 2 },
-    { pos: 10, club: '', team: 'KENYA NAVY',   p: 4, w: 1, d: 0, l: 3, gf: 102, ga: 114, gd: -12, pts: 2 },
-    { pos: 11, club: '', team: 'PRISONS',  p: 5, w: 1, d: 0, l: 4, gf: 127, ga: 162, gd: -35, pts: 2 },
-    { pos: 12, club: '', team: 'HANTERS', p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0 },
-    { pos: 13, club: '', team: 'YOUNG CITY',   p: 3, w: 0, d: 0, l: 3, gf: 52, ga: 75, gd: -23, pts: 0 },
-    { pos: 14, club: '', team: 'JKUAT',  p: 3, w: 0, d: 0, l: 0, gf: 54, ga: 85, gd: -31, pts: 0 },
+    { pos: 10, club: '', team: 'TUK',   p: 2, w: 1, d: 0, l: 1, gf: 52, ga: 62, gd: -10, pts: 2 },
+    { pos: 11, club: '', team: 'KENYA NAVY',   p: 4, w: 1, d: 0, l: 3, gf: 102, ga: 114, gd: -12, pts: 2 },
+    { pos: 12, club: '', team: 'PRISONS',  p: 5, w: 1, d: 0, l: 4, gf: 127, ga: 162, gd: -35, pts: 2 },
+    { pos: 13, club: '', team: 'HANTERS', p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0 },
+    { pos: 14, club: '', team: 'YOUNG CITY',   p: 3, w: 0, d: 0, l: 3, gf: 52, ga: 75, gd: -23, pts: 0 },
+    { pos: 15, club: '', team: 'JKUAT',  p: 3, w: 0, d: 0, l: 0, gf: 54, ga: 85, gd: -31, pts: 0 },
   ],
 };
     
