@@ -110,7 +110,7 @@ export const standings = {
     { pos: 2, club: '', team: 'Rwanda',  p: 10, w: 7, d: 1, l: 2, gf: 240, ga: 215, gd: 25, pts: 22 },
     { pos: 3, club: '', team: 'Tunisia', p: 10, w: 5, d: 2, l: 3, gf: 225, ga: 210, gd: 15, pts: 17 },
   ],
-
+};
     
 // ----------------------------------------------------------------------------
 // NATIONAL TEAMS
@@ -135,7 +135,7 @@ export const gallery = [
   'https://www.michezoafrika.com/newsimages/COACH-MWATHI-2.JPG',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9jpH1W08OMM4ce08BmR3IWlRLd9PeidfsdsPcSgrhaw&s=10',
 ];
-},
+
 // ============================================================================
 // HELPERS — use these in components instead of comparing names
 // ============================================================================
