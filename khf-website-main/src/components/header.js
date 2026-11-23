@@ -48,7 +48,6 @@ export function header(activePath) {
           const active = (activePath || '') === clean;
           return `<a href="${l.href}" class="block text-[12.5px] font-medium px-2.5 py-2 rounded ${active ? 'text-white bg-white/10' : 'text-slate-200 hover:bg-white/10 hover:text-white'}">${l.label}</a>`;
         }).join('')}
-        <a href="#/admin-login" class="bg-khf-red text-white font-bold text-[12.5px] px-3 py-2 rounded md:ml-1">Admin</a>
       </nav>
     </div>
   </header>`;
