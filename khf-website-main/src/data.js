@@ -89,7 +89,7 @@ export const standings = {
     { pos: 9, club: 'lions-men',       team: 'LIONS',        p: 2, w: 0, d: 0, l: 2, gf: 37, ga: 48,  gd: -11, pts: 0 },
     { pos: 10,  club: 'thika-men',       team: 'THIKA COMBAT', p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,   gd: -15,   pts: 0 },
     { pos: 11, club: 'kisiwa-men',      team: 'KISIWA N P',   p: 2, w: 0, d: 0, l: 2, gf: 37, ga: 58,  gd: -21, pts: 0 },
-    { pos: 12, club: 'tao-men',     team: 'TEAM TAO',      p: 4, w: 0, d: 0, l: 4, gf: 37, ga: 109, gd: -72, pts: 0 },
+    { pos: 12, club: 'ranger-men',     team: 'RANGERS',      p: 4, w: 0, d: 0, l: 4, gf: 37, ga: 109, gd: -72, pts: 0 },
   ],
   'premier-women': [
     { pos: 1,  club: 'kisiwa-women',     team: 'KISIWA',           p: 2, w: 2, d: 0, l: 0, gf: 59, ga: 57, gd: 2 ,  pts: 4 },
