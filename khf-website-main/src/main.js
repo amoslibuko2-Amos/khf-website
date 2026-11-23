@@ -1,6 +1,7 @@
 import './style.css';
 import { layout } from './components/layout.js';
 import { SITE_URL } from './config.js';
+import { inject } from '@vercel/analytics';
 
 import home from './pages/home.js';
 import about from './pages/about.js';
@@ -112,3 +113,6 @@ async function render() {
 
 window.addEventListener('hashchange', render);
 window.addEventListener('DOMContentLoaded', render);
+
+// Initialize Vercel Analytics
+inject();
