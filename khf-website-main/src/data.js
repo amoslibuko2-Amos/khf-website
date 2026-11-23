@@ -95,7 +95,7 @@ export const standings = {
     { pos: 1,  club: 'kisiwa-women',     team: 'KISIWA',           p: 2, w: 2, d: 0, l: 0, gf: 59, ga: 57, gd: 2 ,  pts: 4 },
     { pos: 2,  club: 'nairobi-water',    team: 'NAIROBI WATER',    p: 1, w: 1, d: 0, l: 0, gf: 45, ga: 17, gd: 28,  pts: 2 },
     { pos: 3,  club: 'daystar-women',    team: 'DAYSTAR',          p: 1, w: 1, d: 0, l: 0, gf: 37, ga: 13, gd: 24,  pts: 2 },
-    { pos: 4,  club: 'ncpb-women',       team: 'NCPB',             p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
+    { pos: 4,  club: 'ncpb-women',       team: 'NCPB',             p: 1, w: 1, d: 0, l: 0, gf: 46,  ga: 24,  gd: 22,   pts: 2 },
     { pos: 5,  club: 'ku-ladies',        team: 'KU LADIES',        p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
     { pos: 6,  club: 'desert-scorpions', team: 'DESERT SCORPIONS', p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
     { pos: 7,  club: 'firehawks-women',     team: 'FIREHAWKS',     p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0 ,  pts: 0 },
