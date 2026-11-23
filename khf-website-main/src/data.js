@@ -89,7 +89,7 @@ export const standings = {
     { pos: 9, club: 'lions-men',       team: 'LIONS',        p: 2, w: 0, d: 0, l: 2, gf: 37, ga: 48,  gd: -11, pts: 0 },
     { pos: 10,  club: 'thika-men',       team: 'THIKA COMBAT', p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,   gd: -15,   pts: 0 },
     { pos: 11, club: 'kisiwa-men',      team: 'KISIWA N P',   p: 2, w: 0, d: 0, l: 2, gf: 37, ga: 58,  gd: -21, pts: 0 },
-    { pos: 12, club: 'rangers-men',     team: 'RANGERS',      p: 4, w: 0, d: 0, l: 4, gf: 37, ga: 109, gd: -72, pts: 0 },
+    { pos: 12, club: 'tao-men',     team: 'TEAM TAO',      p: 4, w: 0, d: 0, l: 4, gf: 37, ga: 109, gd: -72, pts: 0 },
   ],
   'premier-women': [
     { pos: 1,  club: 'kisiwa-women',     team: 'KISIWA',           p: 2, w: 2, d: 0, l: 0, gf: 59, ga: 57, gd: 2 ,  pts: 4 },
@@ -98,6 +98,8 @@ export const standings = {
     { pos: 4,  club: 'ncpb-women',       team: 'NCPB',             p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
     { pos: 5,  club: 'ku-ladies',        team: 'KU LADIES',        p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
     { pos: 6,  club: 'desert-scorpions', team: 'DESERT SCORPIONS', p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
+    { pos: 1,  club: 'firehawks-women',     team: 'FIREHAWKS',           p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0 ,  pts: 0 },
+    { pos: 1,  club: 'kisiii-women',     team: 'KISIII',           p: 2, w: 1, d: 0, l: 1, gf: 28, ga: 37, gd: -9 ,  pts: 2 },
     { pos: 7,  club: 'ulinzi-sharks',    team: 'ULINZI SHARKS',    p: 1, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
     { pos: 10,  club: 'think queens',     team: 'THINKA',           p: 1, w: 0, d: 0, l: 1, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
       { pos: 9, club: 'jkuat-women',      team: 'JKUAT',            p: 1, w: 0, d: 0, l: 1, gf: 17, ga: 45, gd: -28, pts: 0 },
