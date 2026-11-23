@@ -104,9 +104,8 @@ export const standings = {
     { pos: 10,  club: 'think queens',     team: 'THINKA',           p: 1, w: 0, d: 0, l: 1, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
       { pos: 11, club: 'jkuat-women',      team: 'JKUAT',            p: 1, w: 0, d: 0, l: 1, gf: 17, ga: 45, gd: -28, pts: 0 },
      { pos: 12,  club: 'nys-women',        team: 'NYS',              p: 2, w: 0, d: 0, l: 1, gf: 44, ga: 90, gd: -46, pts: 0 },
-  
-
-[
+  ],
+    'national-men': [
   { pos: 1, club: '', team: 'Boomerang',        p: 3, w: 3, d: 0, l: 0, gf: 85, ga: 77, gd: 8, pts: 6 },
   { pos: 2, club: '', team: 'Kahawa',           p: 3, w: 2, d: 0, l: 1, gf: 84, ga: 64, gd: 20, pts: 4 },
   { pos: 3, club: '', team: 'Kisii Uni',        p: 2, w: 2, d: 0, l: 0, gf: 57, ga: 45, gd: 12, pts: 4 },
@@ -122,7 +121,7 @@ export const standings = {
   { pos: 13, club: '', team: 'TUK',              p: 1, w: 0, d: 0, l: 1, gf: 17, ga: 30, gd: -13, pts: 0 },
   { pos: 14, club: '', team: 'JKUAT',            p: 2, w: 0, d: 0, l: 2, gf: 33, ga: 53, gd: -20, pts: 0 },
   { pos: 15, club: '', team: 'Young City',       p: 3, w: 0, d: 0, l: 3, gf: 52, ga: 75, gd: -23, pts: 0 },
-]
+],
 
 // ----------------------------------------------------------------------------
 // NATIONAL TEAMS
