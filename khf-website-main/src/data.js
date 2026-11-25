@@ -32,9 +32,10 @@ export const clubs = [
   { id: 18, slug: 'kisiwa-women',     name: 'Kisiwa NP Women',       short: 'Kisiwa W',      fullName: 'Kisiwa National Polytechnic Women',                    location: 'Bungoma',  category: 'Senior Women', league: 'premier-women' },
   { id: 19, slug: 'nys-women',        name: 'NYS',                   short: 'NYS',           fullName: 'National Youth Service',                               location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
   { id: 20, slug: 'amazon-women',     name: 'Amazon HC',             short: 'Amazon',        fullName: 'Amazon Handball Club',                                 location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
-  { id: 21, slug: 'desert-scorpions', name: 'Desert Scorpions',      short: 'Scorpions',     fullName: 'Desert Scorpion Women',                                location: 'Thika',    category: 'Senior Women', league: 'premier-women' },
   { id: 22, slug: 'jkuat-women',      name: 'JKUAT',                 short: 'JKUAT',         fullName: 'Jomo Kenyatta University of Agriculture & Technology', location: 'Juja',     category: 'Senior Women', league: 'premier-women' },
   { id: 24, slug: 'ulinzi-sharks',    name: 'Ulinzi Sharks',         short: 'Sharks',        fullName: 'Ulinzi Sharks Handball Club',                          location: 'Langata',  category: 'Senior Women', league: 'premier-women' },
+    { id: 24, slug: 'firehawks',    name: 'firehawks',         short: 'firehawks',        fullName: 'firehawks Handball Club',                          location: 'Langata',  category: 'Senior Women', league: 'premier-women' },
+
 ];
 
 // ----------------------------------------------------------------------------
@@ -98,7 +99,6 @@ export const standings = {
     { pos: 4,  club: 'ncpb-women',       team: 'NCPB',             p: 1, w: 1, d: 0, l: 0, gf: 46,  ga: 24,  gd: 22,   pts: 2 },
     { pos: 8,  club: 'kisii-women',     team: 'KISII',           p: 2, w: 1, d: 0, l: 1, gf: 28, ga: 37, gd: -9 ,  pts: 2 },
     { pos: 5,  club: 'ku-ladies',        team: 'KU LADIES',        p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
-    { pos: 6,  club: 'desert-scorpions', team: 'DESERT SCORPIONS', p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
     { pos: 7,  club: 'firehawks-women',     team: 'FIREHAWKS',     p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0 ,  pts: 0 },
     { pos: 9,  club: 'ulinzi-sharks',    team: 'ULINZI SHARKS',    p: 1, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
     { pos: 10,  club: 'think queens',     team: 'THINKA',           p: 1, w: 0, d: 0, l: 1, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
