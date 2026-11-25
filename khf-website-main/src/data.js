@@ -101,7 +101,7 @@ export const standings = {
     { pos: 5,  club: 'ku-ladies',        team: 'KU LADIES',        p: 0, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: 0,   pts: 0 },
     { pos: 7,  club: 'firehawks-women',     team: 'FIREHAWKS',     p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0 ,  pts: 0 },
     { pos: 9,  club: 'ulinzi-sharks',    team: 'ULINZI SHARKS',    p: 1, w: 0, d: 0, l: 0, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
-    { pos: 10,  club: 'think queens',     team: 'THINKA',           p: 1, w: 0, d: 0, l: 1, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
+    { pos: 10,  club: 'think queens',     team: 'THIKA',           p: 1, w: 0, d: 0, l: 1, gf: 0,  ga: 0,  gd: -15,   pts: 0 },
       { pos: 11, club: 'jkuat-women',      team: 'JKUAT',            p: 1, w: 0, d: 0, l: 1, gf: 17, ga: 45, gd: -28, pts: 0 },
      { pos: 12,  club: 'nys-women',        team: 'NYS',              p: 2, w: 0, d: 0, l: 1, gf: 44, ga: 90, gd: -46, pts: 0 },
   ],
