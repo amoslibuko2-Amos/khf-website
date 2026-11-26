@@ -1,10 +1,3 @@
-Here is the **completely corrected `home.js` file**. 
-
-I have replaced the red "NU" circle with your Daystar Falcon logo, and I updated the name below it so it matches. (I left the "KQ" Kisumu Queens one as it was).
-
-Copy all of this and replace your entire `home.js` file:
-
-```javascript
 import { news, fixtures, standings } from '../data.js';
 
 export default function home() {
@@ -248,4 +241,3 @@ export default function home() {
     </div>
   </section>`;
 }
-```
