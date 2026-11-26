@@ -11,7 +11,7 @@ export default function home() {
     <div class="absolute inset-0">
       <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000" style="background-image:url('https://cdn3.mozzartsport.co.ke/upload/825x464/News/Image/2023_06/1687339475158_1684587803972_20220731110530_AO7I0893.jpg')"></div>
       <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ax3fkQN9BjA0afYZTfOa6ovle7NfAyT22h3CxDo5ASk5jXtpeXB0E8Y&s=10')"></div>
-      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1600&q=80')"></div>
+      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6WZdEMpj4YnllJbLLq0f0ynlUH-dgEzARWR-U97asyg&s=10')"></div>
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-khf-black/95 via-khf-black/65 to-khf-black/20"></div>
     <div class="relative container-x text-white py-16 max-w-3xl">
