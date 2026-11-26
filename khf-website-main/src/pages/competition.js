@@ -70,4 +70,3 @@ export default function competition({ params }) {
     </div>
   </section>`;
 }
-export default competition;
