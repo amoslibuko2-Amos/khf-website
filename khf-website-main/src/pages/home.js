@@ -9,7 +9,7 @@ export default function home() {
   <!-- HERO -->
   <section class="relative min-h-[85vh] flex items-center overflow-hidden">
     <div class="absolute inset-0">
-      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000" style="https://cdn3.mozzartsport.co.ke/upload/825x464/News/Image/2023_06/1687339475158_1684587803972_20220731110530_AO7I0893.jpg')"></div>
+      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000" style="background-image:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=1600&q=80')"></div>
       <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('https://images.unsplash.com/photo-1552667466-07770ae110d0?w=1600&q=80')"></div>
       <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000" style="background-image:url('https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1600&q=80')"></div>
     </div>
