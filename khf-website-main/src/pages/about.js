@@ -53,3 +53,4 @@ export default function about() {
     </div>
   </section>`;
 }
+export default about;
