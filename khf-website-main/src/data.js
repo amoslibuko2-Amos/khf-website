@@ -22,7 +22,7 @@ export const clubs = [
   { id: 9,  slug: 'ku-men',           name: 'Kenyatta University',  short: 'KU',        fullName: 'Kenyatta University',                          location: 'Nairobi',  category: 'Senior Men', league: 'premier-men' },
   { id: 11, slug: 'rangers-men',      name: 'Rangers HC',           short: 'Rangers',   fullName: 'Rangers Handball Club',                        location: '',         category: 'Senior Men', league: 'premier-men' }, // TODO: location
   { id: 12, slug: 'thika-men',        name: 'Thika Engineers',      short: 'Thika',     fullName: 'Thika Engineers',                              location: 'Thika',    category: 'Senior Men', league: 'premier-men' },
-  { id: 8,  slug: 'Daystar-men',        name: 'Daystar HC',             short: 'Daystar',  logo: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgk...',fullName: 'Daystar falcons Club',                   location: 'Machakos', category: 'Senior Men', league: 'premier-men' }, // TODO: location
+  { id: 8,  slug: 'Daystar-men',      name: 'Daystar HC',         short: 'Daystar',  logo: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgk...',fullName: 'Daystar falcons Club', location: 'Machakos', category: 'Senior Men', league: 'premier-men' }, // TODO: location
 
   // --------------------------------- Women ---------------------------------
   { id: 14, slug: 'nairobi-water',    name: 'Nairobi Water Queens',  short: 'Nairobi Water', fullName: 'Nairobi Water',                                        location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
