@@ -54,4 +54,3 @@ export default function about() {
   </section>
   `;
 }
-export default about;
