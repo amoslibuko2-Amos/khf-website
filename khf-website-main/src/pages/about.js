@@ -51,6 +51,7 @@ export default function about() {
         </div>
       </div>
     </div>
-  </section>`;
+  </section>
+  `;
 }
 export default about;
