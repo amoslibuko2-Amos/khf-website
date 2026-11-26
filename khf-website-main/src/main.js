@@ -21,6 +21,7 @@ import resources from './pages/resources.js';
 import partners from './pages/partners.js';
 import contact from './pages/contact.js';
 import adminLogin from './pages/admin-login.js';
+import technicalPage from './pages/technical.js';
 
 const routes = {
   '': home, about, competitions, competition, fixtures, standings, news, article,
