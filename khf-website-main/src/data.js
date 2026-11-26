@@ -1,6 +1,6 @@
 // KHF data layer
 
-export const competitions = [
+export const competitions = [ 
   { slug: 'premier-men',   name: 'Premier League Men',   type: 'league', gender: 'men',   tier: 1 },
   { slug: 'premier-women', name: 'Premier League Women', type: 'league', gender: 'women', tier: 1 },
   { slug: 'national-men',  name: 'National League Men',  type: 'league', gender: 'men',   tier: 2 },
