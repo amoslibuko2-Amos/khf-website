@@ -1,3 +1,10 @@
+Here is the **completely corrected `home.js` file**. 
+
+I have replaced the red "NU" circle with your Daystar Falcon logo, and I updated the name below it so it matches. (I left the "KQ" Kisumu Queens one as it was).
+
+Copy all of this and replace your entire `home.js` file:
+
+```javascript
 import { news, fixtures, standings } from '../data.js';
 
 export default function home() {
@@ -140,8 +147,10 @@ export default function home() {
           <p class="text-sm font-bold text-khf-red mt-1">Best GK · 42% save rate</p>
         </div>
         <div class="card p-5 text-center">
-          <div class="w-20 h-20 rounded-full bg-khf-red text-white font-head text-2xl font-bold grid place-items-center mx-auto mb-3">NU</div>
-          <h3 class="font-semibold">Nairobi United</h3>
+          <div class="w-20 h-20 rounded-full bg-white border border-slate-200 overflow-hidden grid place-items-center mx-auto mb-3 p-1">
+            <img src="/logos/Falcon.png" alt="Daystar Logo" class="w-full h-full object-contain" />
+          </div>
+          <h3 class="font-semibold">Daystar HC</h3>
           <p class="text-xs text-slate-500">Premier League Men</p>
           <p class="text-sm font-bold text-khf-red mt-1">Leaders · 30 pts</p>
         </div>
@@ -239,3 +248,4 @@ export default function home() {
     </div>
   </section>`;
 }
+```
