@@ -110,4 +110,4 @@ export function header(activePath) {
     </header>
   `;
 }
-
+export default home;
