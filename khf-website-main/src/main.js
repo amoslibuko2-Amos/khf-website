@@ -24,15 +24,35 @@ import adminLogin from './pages/admin-login.js';
 import technicalPage from './pages/technical.js';
 
 const routes = {
-  '': home, about, competitions, competition, fixtures, standings, news, article,
-  'national-teams': nationalTeams, 'national-team': nationalTeam, clubs, club,
-  statistics, gallery, development, resources, partners, contact,
+  '': home,
+  about,
+  competitions,
+  competition,
+  fixtures,
+  standings,
+  news,
+  article,
+  'national-teams': nationalTeams,
+  'national-team': nationalTeam,
+  clubs,
+  club,
+
+  // Technical information and refereeing page.
+  'technical': technicalPage,
+
+  statistics,
+  gallery,
+  development,
+  resources,
+  partners,
+  contact,
   'admin-login': adminLogin,
 };
 
 function parseHash() {
   const raw = window.location.hash.replace(/^#\/?/, '');
   const [pathPart, queryPart] = raw.split('?');
+
   return {
     path: pathPart.split('/')[0] || '',
     params: new URLSearchParams(queryPart || ''),
@@ -63,12 +83,13 @@ async function render() {
   const page = routes[path] || home;
   const app = document.getElementById('app');
 
-  // Show loading immediately
+  // Show loading immediately.
   app.innerHTML = loadingState();
 
   let content;
+
   try {
-    // Pages can return string OR Promise<string>
+    // Pages can return a string or a Promise<string>.
     content = await page({ params });
   } catch (err) {
     console.error('[KHF] Page render failed:', err);
@@ -83,28 +104,37 @@ async function render() {
   app.innerHTML = layout(content, path);
   window.scrollTo(0, 0);
 
-  // Set document title from env-based site URL (SEO)
+  // Keep the existing title or use the federation name as a fallback.
   document.title = document.title || 'Kenya Handball Federation';
 
-  // Mobile nav
+  // Mobile navigation.
   const toggle = document.getElementById('navToggle');
   const nav = document.getElementById('mainNav');
+
   if (toggle && nav) {
     toggle.onclick = () => {
       nav.classList.toggle('hidden');
       nav.classList.toggle('flex');
-      toggle.setAttribute('aria-expanded', nav.classList.contains('flex'));
+
+      toggle.setAttribute(
+        'aria-expanded',
+        nav.classList.contains('flex')
+      );
     };
   }
 
-  // Hero slider
+  // Hero slider.
   const slides = document.querySelectorAll('.hero-slide');
+
   if (slides.length > 1) {
     let i = 0;
+
     setInterval(() => {
       slides[i].classList.remove('opacity-100');
       slides[i].classList.add('opacity-0');
+
       i = (i + 1) % slides.length;
+
       slides[i].classList.add('opacity-100');
       slides[i].classList.remove('opacity-0');
     }, 6000);
