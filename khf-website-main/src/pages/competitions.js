@@ -20,3 +20,4 @@ export default function competitionsPage() {
     </div>
   </section>`;
 }
+export default competitions;
