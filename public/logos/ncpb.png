@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome</title>
+  
+  <!-- Meta tags for link previews -->
+  <meta name="description" content=""/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="NATIONAL CEREALS AND PRODUCE BOARD"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:image" content="https://ncpb.ecitizen.go.ke/files/local-download?name=ecitizen-logo-dark.png&amp;path=f35e95d508f03b801ec017b75f92b83cb056b502.png"/>
+  <meta property="og:url" content="https://ncpb.ecitizen.go.ke/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="/favicon-a8ca4e3a2bb8fea46a9ee9e102e7d3eb.ico?vsn=d">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="/favicon-a8ca4e3a2bb8fea46a9ee9e102e7d3eb.ico?vsn=d">
+
+  <script type="text/javascript">
+		window.isAdmin = "" === "true";
+		window.isLoggedIn = "false" === "true";
+		window.GlobalLinks = {
+			"home": "/",
+			"admin-link": "/admin",
+			"dashboard": "/dashboard",
+			"login": "/auth/sso-login",
+			"logout": "/auth",
+			"register": "/auth/register",
+			"verify-output": "/verify",
+			"applications": "/applications",
+			"services": "/services",
+			"primary-logo": "/files/local-download?name=ecitizen-logo-dark.png&path=f35e95d508f03b801ec017b75f92b83cb056b502.png",
+			"secondary-logo": "/files/local-download?name=ncpblogo1.png&path=33fa3d2d3d98f5af53ec19327052f8499420498c.png",
+		};
+		window.CSRF_TOKEN = "BgJwPVZeKh1kLiV2CClDFj4iS1cIXT0GTgBR92eOILpNAJ1IUh1-m0G1";
+    window.SSO_NAME = "eCitizen"
+		window.services = JSON.parse('[{\"service_group_id\":1,\"featured_text\":null,\"featured\":false,\"slug\":\"fumigation-and-pest-control-services-3\",\"description\":\"Fumigation and Pest Control Services\",\"name\":\"Fumigation and Pest Control Services\",\"id\":3},{\"service_group_id\":1,\"featured_text\":null,\"featured\":false,\"slug\":\"ncpb-leasing-services-1\",\"description\":\"National Cereals and produce Board leasing Services\",\"name\":\"NCPB Leasing Services\",\"id\":1},{\"service_group_id\":1,\"featured_text\":null,\"featured\":false,\"slug\":\"ncpb-products-4\",\"description\":\"NCPB  Products\",\"name\":\"NCPB  Products\",\"id\":4},{\"service_group_id\":1,\"featured_text\":null,\"featured\":false,\"slug\":\"post-harvest-management-services-5\",\"description\":\"Post-Harvest management services    \",\"name\":\"Post-Harvest management services    \",\"id\":5}]')
+    window.cached = JSON.parse('{}')
+  </script>
+
+  <!-- Styles required by this views -->
+<style type="text/css">
+
+</style>
+
+</head>
+  <body class="scroll bg-white">
+<div class="rqiynridad" id="custom-page" v-cloak><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="National Cereals & Produce Board Services">
+    <title> National Cereals & Produce Board </title><link rel="stylesheet" href="https://ncpb.ecitizen.go.ke/resources/download/output">
+</head>
+
+<body class="font-lexend">
+
+    <div class="min-h-screen">
+        <section>
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-row justify-between items-start sm:items-center pb-5 pt-5 relative">
+                    <div>
+                        <img src="https://ncpb.ecitizen.go.ke/resources/download/cereals-logo" class="h-9 sm:h-12 lg:h-14" alt="National Cereals & Produce Board">
+                    </div>
+
+                    <div v-if="!isLoggedIn" class="flex items-center justify-end flex-1 lg:w-0 space-x-2">
+                        <a href="https://accounts.ecitizen.go.ke/register" class="whitespace-nowrap inline-flex items-center justify-center px-5 py-1.5 border border-transparent rounded-lg text-sm font-semibold text-white bg-primary-100 hover:opacity-80">
+                            Sign up
+                        </a>
+                        <custom-link name="login" class="whitespace-nowrap inline-flex items-center justify-center px-5 py-1.5 border border-primary-50 bg-primary-50 rounded-lg text-sm font-semibold text-primary-100 hover:opacity-80">
+                            Sign in
+                        </custom-link>
+                    </div>
+                    <div v-if="isLoggedIn" class="flex items-center justify-end flex-1 lg:w-0 space-x-2">
+                        <custom-link name="dashboard" class="whitespace-nowrap inline-flex items-center justify-center px-5 py-1.5 border border-primary-50 bg-primary-50 rounded-lg text-sm font-semibold text-primary-100 hover:opacity-80 cursor-pointer">
+                            Dashboard
+                        </custom-link>
+                        <admin-button class="whitespace-nowrap inline-flex items-center justify-center px-5 py-1.5 border border-primary-50 bg-primary-50 rounded-lg text-sm font-semibold text-primary-100 hover:opacity-80 cursor-pointer">
+                            Admin
+                        </admin-button>
+                        <logout-button name="dashboard" class="whitespace-nowrap inline-flex items-center justify-center px-5 py-1.5 border border-transparent rounded-lg text-sm font-semibold text-black bg-transparent hover:opacity-80 cursor-pointer hover:underline">
+                            Sign out
+                        </logout-button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- nav section -->
+
+            <section class="relative ">
+                <div class="max-h-[580px] overflow-hidden">
+                    <img src="https://ncpb.ecitizen.go.ke/resources/download/bg-1 " class="hidden sm:block w-full " alt="National Cereals & Produce Board">
+                </div>
+                <div class="sm:absolute w-full left-0 top-0 right-0 bottom-0 h-[280px] sm:h-[65%] md:h-[65%] lg:h-[83%] z-10 max-w-7xl mx-auto px-4 bg-cover bg-center bg-no-repeat bg-[url('../assets/LandingPage/bg-1.jpg')] sm:bg-none ">
+                    <div class="h-[280px] absolute w-full left-0 top-0 right-0 bottom-0 z-10  bg-[#00000080] sm:hidden">
+
+                    </div>
+                    <div class="flex flex-col text-white justify-center items-center h-full relative z-20">
+                        <div class="grid grid-cols-12 w-full">
+                            <div class="hidden sm:block sm:col-span-4 lg:col-span-5 xl:col-span-6">
+                                &nbsp;
+                            </div>
+                            <div class="col-span-12 sm:col-span-8 lg:col-span-7 xl:col-span-6 text-xl md:text-3xl md:leading-[38px] lg:text-4xl lg:leading-[46px] md:pl-10 lg:pl-24">
+                                <h1 class="font-light sm:max-w-xl lg:max-w-lg text-white sm:text-primary-200">
+                                    To actualise efficiency, customer service, integrity & accountability, <span class="text-primary-100 font-semibold ">creativity & innovation.</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content box -->
+
+                <div class="sm:absolute w-full left-0 right-0 -bottom-32 lg:-bottom-24 z-10 max-w-7xl mx-auto px-4 ">
+                    <div class="flex flex-col sm:flex-row w-full rounded-lg bg-white h-auto items-stretch sm:divide-x-0 divide-primary-100 py-2 sm:py-0">
+                        <div class="px-4 sm:px-8 pt-5 pb-5 sm:pb-5  lg:py-7 space-y-3 bg-[#FFFCCC] text-primary-300 sm:rounded-tl-lg sm:rounded-bl-lg flex flex-col justify-center">
+                            <h2 class="text-lg lg:text-xl font-semibold ">Welcome to National Cereals & Produce Board Services</h2>
+                            <p class="text-base lg:text-lg font-light">Introducing online National Cereals and Produce Board services. Apply and pay for the services conveniently through your eCitizen account</p>
+                        </div>
+                        <div class="px-0 sm:px-8 py-5 lg:py-7 space-y-3 text-black sm:rounded-tr-3xl sm:rounded-br-3xl flex flex-col justify-center ">
+                            <div>
+                                <img src="https://ncpb.ecitizen.go.ke/resources/download/ecitizen" alt="ecitizen" class="h-6 sm:h-7 lg:h-8 ">
+                            </div>
+
+                            <p class="text-base lg:text-lg text-primary-300">
+                                Access the National Cereals & Produce Board using your eCitizen account
+                            </p>
+                            <div v-if="!isLoggedIn">
+                                <a href="https://accounts.ecitizen.go.ke/register" class="whitespace-nowrap inline-flex items-center justify-center px-9 py-2 border border-primary-50  bg-primary-50 rounded-lg text-sm font-semibold text-primary-100 hover:opacity-80 space-x-2 ">
+                                    <span>Sign up</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sub banner section -->
+
+            </section>
+            <!-- banner section -->
+
+        </section>
+        <!-- header section -->
+
+        <section class="bg-[#FFFEF0]">
+            <div class="max-w-7xl mx-auto px-4 ">
+                <div class="pb-8 md:pb-20 pt-8 sm:pt-40 md:pt-44 lg:pt-40 lg:pb-28 rounded-xl mb-8 sm:mb-10 md:mb-10 lg:mb-20 xl:mb-32 ">
+                    <div class="px-0 sm:pl-8 sm:pr-0 mx-auto grid grid-cols-12 gap-2 md:gap-3 lg:gap-10 ">
+                        <div class="col-span-12 md:col-span-7 lg:col-span-7 pr-0 md:pr-5 lg:pr-12">
+                            <h2 class="text-lg md:text-xl font-semibold text-primary-300 mb-4 relative ">
+                                About NCPB
+                            </h2>
+                            <p class="text-base tracking-[0.01em] lg:text-lg font-light mb-5 md:mb-0 text-black">
+                                National Cereals and Produce Board (NCPB) is a commercial State Corporation under the Ministry of Agriculture, Livestock, Fisheries and Cooperatives. The Board’s mandate is to provide logistics support services to the government on food security matters
+                                and to carry out market intervention for grains and farm inputs on behalf of the government.
+                            </p>
+                        </div>
+                        <div class="col-span-12 md:col-span-5 lg:col-span-5 relative z-10 "><img alt="" src="https://ncpb.ecitizen.go.ke/resources/download/img-3" class="md:absolute right-0 md:-top-3 lg:-top-2 w-full sm:w-[88%]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about National Cereals & Produce Board -->
+
+        <section>
+            <div class="max-w-7xl mx-auto px-4 sm:pt-4 ">
+                <div class="px-0 sm:px-8">
+                    <h2 class="text-xl lg:text-2xl font-semibold text-primary-300 mb-3 "> Online Services </h2>
+                    <p class="font-normal text-base md:text-lg md:leading-[26px]  text-primary-900 w-10/12 ">
+                        Apply for our services and pay. After completing the application print the resulting document and get what you need at ease.
+                    </p>
+                </div>
+                <div class="px-0 sm:pl-8 sm:pr-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 py-8 sm:py-10 ">
+                    <div v-for="service in services" class="bg-primary-800 p-5 rounded-xl sm:space-y-4 flex flex-col justify-between ">
+                        <div class="pb-3 ">
+                            <svg xmlns="http://www.w3.org/2000/svg " width="48 " height="49 " viewBox="0 0 48 49 " fill="none ">
+                                <rect y="0.817017 " width="48" height="48" rx="10 " fill="#1B8426"></rect>
+                                <path d="M18.0944 24.0458C18.0322 23.6452 18 23.2349 18 22.817C18 18.3987 21.6052 14.817 26.0526 14.817C30.4999 14.817 34.1052 18.3987 34.1052 22.817C34.1052 23.8151 33.9213 24.7705 33.5852 25.6515C33.5154 25.8345 33.4804
+                                    25.926 33.4646 25.9974C33.4489 26.0682 33.4428 26.118 33.4411 26.1905C33.4394 26.2636 33.4493 26.3442 33.4692 26.5053L33.8717 29.7755C33.9153 30.1295 33.9371 30.3066 33.8782 30.4352C33.8266 30.548 33.735 30.6375 33.6211 30.6865C33.4911
+                                    30.7424 33.3146 30.7166 32.9617 30.6648L29.7765 30.1979C29.6101 30.1736 29.527 30.1614 29.4512 30.1618C29.3763 30.1622 29.3245 30.1677 29.2511 30.1832C29.177 30.1987 29.0823 30.2342 28.893 30.3051C28.0097 30.636 27.0524 30.817 26.0526
+                                    30.817C25.6344 30.817 25.2237 30.7853 24.8227 30.7243M19.6316 34.817C22.5965 34.817 25 32.3546 25 29.317C25 26.2795 22.5965 23.817 19.6316 23.817C16.6667 23.817 14.2632 26.2795 14.2632 29.317C14.2632 29.9276 14.3603 30.515 14.5395 31.0637C14.6153
+                                    31.2957 14.6532 31.4117 14.6657 31.491C14.6786 31.5737 14.6809 31.6201 14.6761 31.7037C14.6714 31.7838 14.6514 31.8743 14.6113 32.0553L14 34.817L16.9948 34.408C17.1583 34.3857 17.24 34.3745 17.3114 34.375C17.3865 34.3755 17.4264 34.3796
+                                    17.5001 34.3943C17.5701 34.4082 17.6742 34.445 17.8823 34.5184C18.4306 34.7119 19.0191 34.817 19.6316 34.817Z " stroke="#F4E1F2 " stroke-width="2 " stroke-linecap="round " stroke-linejoin="round "></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h6 class="text-base sm:text-lg font-bold text-primary-100 pb-3">{{service.name}}</h6>
+
+                            <p class="text-black text-base pb-3 sm:pb-0">
+                                {{ service.description }}
+                            </p>
+                        </div>
+
+                        <div class="flex flex-row justify-between items-center ">
+                            <a href="https://ncpb.co.ke/aflatoxin-testing" target="_blank" class="inline-flex text-sm text-primary-700 hover:underline cursor-pointer opacity-70">Learn more</a>
+                            <a :href="'/services/' + service.service_group_id + '/apply/' + service.id" 
+                            class="whitespace-nowrap inline-flex items-center justify-center px-3 py-2 border border-primary-100 bg-primary-800 rounded-xl shadow-sm text-sm font-bold text-primary-100 hover:opacity-80 space-x-2 ">
+                                <span>Apply Now</span>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg " width="21 " height="20 " viewBox="0 0 21 20 " fill="none ">
+                                        <path d="M4.50005 10H16.1667M16.1667 10L10.3334 4.16669M16.1667 10L10.3334 15.8334 " stroke="#1B8426" stroke-width="1.66667 " stroke-linecap="round " stroke-linejoin="round "></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="bg-primary-800 p-5 rounded-xl sm:space-y-4 flex flex-col justify-between ">
+                        <div class="pb-3 ">
+                            <svg xmlns="http://www.w3.org/2000/svg " width="48 " height="49 " viewBox="0 0 48 49 " fill="none ">
+                                <rect y="0.817017 " width="48 " height="48 " rx="10 " fill="#1B8426"></rect>
+                                <path d="M18.0944 24.0458C18.0322 23.6452 18 23.2349 18 22.817C18 18.3987 21.6052 14.817 26.0526 14.817C30.4999 14.817 34.1052 18.3987 34.1052 22.817C34.1052 23.8151 33.9213 24.7705 33.5852 25.6515C33.5154 25.8345 33.4804
+                    25.926 33.4646 25.9974C33.4489 26.0682 33.4428 26.118 33.4411 26.1905C33.4394 26.2636 33.4493 26.3442 33.4692 26.5053L33.8717 29.7755C33.9153 30.1295 33.9371 30.3066 33.8782 30.4352C33.8266 30.548 33.735 30.6375 33.6211 30.6865C33.4911
+                    30.7424 33.3146 30.7166 32.9617 30.6648L29.7765 30.1979C29.6101 30.1736 29.527 30.1614 29.4512 30.1618C29.3763 30.1622 29.3245 30.1677 29.2511 30.1832C29.177 30.1987 29.0823 30.2342 28.893 30.3051C28.0097 30.636 27.0524 30.817 26.0526
+                    30.817C25.6344 30.817 25.2237 30.7853 24.8227 30.7243M19.6316 34.817C22.5965 34.817 25 32.3546 25 29.317C25 26.2795 22.5965 23.817 19.6316 23.817C16.6667 23.817 14.2632 26.2795 14.2632 29.317C14.2632 29.9276 14.3603 30.515 14.5395 31.0637C14.6153
+                    31.2957 14.6532 31.4117 14.6657 31.491C14.6786 31.5737 14.6809 31.6201 14.6761 31.7037C14.6714 31.7838 14.6514 31.8743 14.6113 32.0553L14 34.817L16.9948 34.408C17.1583 34.3857 17.24 34.3745 17.3114 34.375C17.3865 34.3755 17.4264 34.3796
+                    17.5001 34.3943C17.5701 34.4082 17.6742 34.445 17.8823 34.5184C18.4306 34.7119 19.0191 34.817 19.6316 34.817Z " stroke="white " stroke-width="2 " stroke-linecap="round " stroke-linejoin="round "></path>
+                            </svg>
+                        </div>
+
+                        <h6 class="text-base sm:text-lg font-bold text-primary-100 pb-3 ">Leasing Services</h6>
+
+                        <p class="text-primary-400 text-base pb-3 sm:pb-0">
+                            Leasing of conventional stores, silo bins, residential houses, office space, farming land services are available.
+                        </p>
+
+                        <div class="flex flex-row justify-between items-center ">
+                            <a class="inline-flex text-sm text-primary-700 hover:underline cursor-pointer opacity-70 ">Learn more</a>
+                            <a href=" " 
+                            class="whitespace-nowrap inline-flex items-center justify-center px-3 py-2 border border-primary-100 bg-primary-800 rounded-xl shadow-sm text-sm font-bold text-primary-100 hover:opacity-80 space-x-2 ">
+                                <span>Apply Now</span>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg " width="21 " height="20 " viewBox="0 0 21 20 " fill="none ">
+                                        <path d="M4.50005 10H16.1667M16.1667 10L10.3334 4.16669M16.1667 10L10.3334 15.8334 " stroke="#1B8426" stroke-width="1.66667 " stroke-linecap="round " stroke-linejoin="round "/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary-800 p-5 rounded-xl sm:space-y-4 flex flex-col justify-between ">
+                        <div class="pb-3 ">
+                            <svg xmlns="http://www.w3.org/2000/svg " width="48 " height="49 " viewBox="0 0 48 49 " fill="none ">
+                                <rect y="0.817017 " width="48 " height="48 " rx="10 " fill="#1B8426"></rect>
+                                <path d="M18.0944 24.0458C18.0322 23.6452 18 23.2349 18 22.817C18 18.3987 21.6052 14.817 26.0526 14.817C30.4999 14.817 34.1052 18.3987 34.1052 22.817C34.1052 23.8151 33.9213 24.7705 33.5852 25.6515C33.5154 25.8345 33.4804
+                    25.926 33.4646 25.9974C33.4489 26.0682 33.4428 26.118 33.4411 26.1905C33.4394 26.2636 33.4493 26.3442 33.4692 26.5053L33.8717 29.7755C33.9153 30.1295 33.9371 30.3066 33.8782 30.4352C33.8266 30.548 33.735 30.6375 33.6211 30.6865C33.4911
+                    30.7424 33.3146 30.7166 32.9617 30.6648L29.7765 30.1979C29.6101 30.1736 29.527 30.1614 29.4512 30.1618C29.3763 30.1622 29.3245 30.1677 29.2511 30.1832C29.177 30.1987 29.0823 30.2342 28.893 30.3051C28.0097 30.636 27.0524 30.817 26.0526
+                    30.817C25.6344 30.817 25.2237 30.7853 24.8227 30.7243M19.6316 34.817C22.5965 34.817 25 32.3546 25 29.317C25 26.2795 22.5965 23.817 19.6316 23.817C16.6667 23.817 14.2632 26.2795 14.2632 29.317C14.2632 29.9276 14.3603 30.515 14.5395 31.0637C14.6153
+                    31.2957 14.6532 31.4117 14.6657 31.491C14.6786 31.5737 14.6809 31.6201 14.6761 31.7037C14.6714 31.7838 14.6514 31.8743 14.6113 32.0553L14 34.817L16.9948 34.408C17.1583 34.3857 17.24 34.3745 17.3114 34.375C17.3865 34.3755 17.4264 34.3796
+                    17.5001 34.3943C17.5701 34.4082 17.6742 34.445 17.8823 34.5184C18.4306 34.7119 19.0191 34.817 19.6316 34.817Z " stroke="white " stroke-width="2 " stroke-linecap="round " stroke-linejoin="round "></path>
+                            </svg>
+                        </div>
+
+                        <h6 class="#text-base sm:text-lg font-bold text-primary-100 pb-3 ">Third Party Services</h6>
+
+                        <p class="text-primary-400 text-base pb-3 sm:pb-0 ">
+                            Weigh bridge service, Grain Grading, Grain Cleaning & Drying, Bagging and Pest Control services are offered.
+                        </p>
+
+                        <div class="flex flex-row justify-between items-center ">
+                            <a class="inline-flex text-sm text-primary-700 hover:underline cursor-pointer opacity-70 ">Learn more</a>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-3 py-2 border border-primary-100 bg-primary-800 rounded-xl shadow-sm text-sm font-bold text-primary-100 hover:opacity-80 space-x-2 ">
+                                <span>Apply Now</span>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg " width="21 " height="20 " viewBox="0 0 21 20 " fill="none ">
+                                        <path d="M4.50005 10H16.1667M16.1667 10L10.3334 4.16669M16.1667 10L10.3334 15.8334 " stroke="#1B8426" stroke-width="1.66667 " stroke-linecap="round " stroke-linejoin="round "/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary-800 p-5 rounded-xl sm:space-y-4 flex flex-col justify-between ">
+                        <div class="pb-3 ">
+                            <svg xmlns="http://www.w3.org/2000/svg " width="48 " height="49 " viewBox="0 0 48 49 " fill="none ">
+                                <rect y="0.817017 " width="48 " height="48 " rx="10 " fill="#1B8426"></rect>
+                                <path d="M18.0944 24.0458C18.0322 23.6452 18 23.2349 18 22.817C18 18.3987 21.6052 14.817 26.0526 14.817C30.4999 14.817 34.1052 18.3987 34.1052 22.817C34.1052 23.8151 33.9213 24.7705 33.5852 25.6515C33.5154 25.8345 33.4804
+                    25.926 33.4646 25.9974C33.4489 26.0682 33.4428 26.118 33.4411 26.1905C33.4394 26.2636 33.4493 26.3442 33.4692 26.5053L33.8717 29.7755C33.9153 30.1295 33.9371 30.3066 33.8782 30.4352C33.8266 30.548 33.735 30.6375 33.6211 30.6865C33.4911
+                    30.7424 33.3146 30.7166 32.9617 30.6648L29.7765 30.1979C29.6101 30.1736 29.527 30.1614 29.4512 30.1618C29.3763 30.1622 29.3245 30.1677 29.2511 30.1832C29.177 30.1987 29.0823 30.2342 28.893 30.3051C28.0097 30.636 27.0524 30.817 26.0526
+                    30.817C25.6344 30.817 25.2237 30.7853 24.8227 30.7243M19.6316 34.817C22.5965 34.817 25 32.3546 25 29.317C25 26.2795 22.5965 23.817 19.6316 23.817C16.6667 23.817 14.2632 26.2795 14.2632 29.317C14.2632 29.9276 14.3603 30.515 14.5395 31.0637C14.6153
+                    31.2957 14.6532 31.4117 14.6657 31.491C14.6786 31.5737 14.6809 31.6201 14.6761 31.7037C14.6714 31.7838 14.6514 31.8743 14.6113 32.0553L14 34.817L16.9948 34.408C17.1583 34.3857 17.24 34.3745 17.3114 34.375C17.3865 34.3755 17.4264 34.3796
+                    17.5001 34.3943C17.5701 34.4082 17.6742 34.445 17.8823 34.5184C18.4306 34.7119 19.0191 34.817 19.6316 34.817Z " stroke="white " stroke-width="2 " stroke-linecap="round " stroke-linejoin="round "></path>
+                            </svg>
+                        </div>
+
+                        <h6 class="#text-base sm:text-lg font-bold text-primary-100 pb-3 ">Warehouse Receipt Systems</h6>
+
+                        <p class="text-primary-400 text-base pb-3 sm:pb-0 ">
+                            Farmers and traders can store their grain and release into the market when prices improve.
+                        </p>
+
+                        <div class="flex flex-row justify-between items-center ">
+                            <a class="inline-flex text-sm text-primary-700 hover:underline cursor-pointer opacity-70 ">Learn more</a>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-3 py-2 border border-primary-100 bg-primary-800 rounded-xl shadow-sm text-sm font-bold text-primary-100 hover:opacity-80 space-x-2 ">
+                                <span>Apply Now</span>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg " width="21 " height="20 " viewBox="0 0 21 20 " fill="none ">
+                                        <path d="M4.50005 10H16.1667M16.1667 10L10.3334 4.16669M16.1667 10L10.3334 15.8334 " stroke="#1B8426" stroke-width="1.66667 " stroke-linecap="round " stroke-linejoin="round "/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+        </section>
+        <!-- services section -->
+
+        <section class="relative before:absolute before:content-[ ''] before:w-full  sm:before:w-[99%] xl:before:w-[98%] 2xl:before:w-[92%] before:h-full before:bg-[#FFFEF0] before:right-0 before:bottom-0 sm:before:rounded-tl-lg sm:before:rounded-bl-lg before:-z-10 ">
+            <div class="max-w-7xl mx-auto px-4 z-10 ">
+                <div class="pb-8 pt-8 md:pt-16 md:pb-12 lg:pt-20 lg:pb-20 rounded-xl mb-8 sm:mb-10 md:mb-28 lg:mb-36">
+                    <div class="sm:pl-8 sm:pr-0 grid grid-cols-12 gap-2 md:gap-3 lg:gap-10">
+                        <div class="col-span-12 md:col-span-6 lg:col-span-7 pr-0 md:pr-5 lg:pr-12 space-y-4 sm:space-y-5 mb-5 md:mb-0 ">
+                            <h2 class="text-xl tracking-[0.01em] lg:text-2xl font-normal text-primary-300">
+                                NCPB is about doing everything now, with a sense of urgency, immediacy and accuracy.
+                            </h2>
+                            <p class="text-base tracking-[0.01em] lg:text-lg font-light text-black">
+                                The principle also seeks to actualize our core values; efficiency, teamwork, customer service, integrity & accountability, creativity & innovation. the thinking calls for doing everything with high levels of precision and striving for ruthless aggression
+                                for results.
+                            </p>
+                        </div>
+                        <div class="col-span-12 md:col-span-6 lg:col-span-5 relative z-10 "><img alt="National Cereals & Produce Board" src="https://ncpb.ecitizen.go.ke/resources/download/img-4" class="md:absolute right-0 md:-top-3 lg:-top-12 w-full sm:w-[81%]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- content section -->
+
+        <footer class="bg-[#F3FAFC]">
+            <div class="max-w-7xl mx-auto px-4 py-12 ">
+                <div class="px-0 sm:px-8 grid grid-cols-12 gap-x-5 ">
+                    <div class="col-span-12 sm:col-span-5 md:col-span-4 space-y-5 sm:space-y-12 mb-6 sm:mb-0 ">
+                        <div>
+                            <img src="https://ncpb.ecitizen.go.ke/resources/download/cereals-logo" class="h-9 md:h-12 lg:h-14" alt="National Cereals & Produce Board">
+                        </div>
+                        <div>
+                            <a href=" ">
+                                <img src="https://ncpb.ecitizen.go.ke/resources/download/ecitizen-gray" class="h-6 lg:h-7" alt="eCitizen">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-7 md:col-span-5 space-y-4 sm:space-y-6 ">
+                        <div class="space-y-4 ">
+                            <p class="text-base sm:text-lg text-[#475467] font-semibold ">Visit us</p>
+                            <ul class="text-sm sm:text-base text-[#475467] font-light space-y-1 ">
+                                <li>National Cereals and Produce Board HQ, Nairobi and all other branches</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-4 ">
+                            <p class="text-base sm:text-lg text-[#475467] font-semibold ">Contact us</p>
+                            <ul class="text-sm sm:text-base text-[#475467] font-light space-y-1 ">
+                                <li>0206536028</li>
+                                <li>info@pcpb.co.ke</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-3 hidden md:block ">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="sm:text-right pt-7 ">
+                    <p class="text-sm text-[#475467] text-left sm:text-right font-light">© Copyright eCitizen {{new Date().getFullYear()}}. All rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html></div>
+<script src="/js/vendors~admin~app-4d93892ae6640216cb0c2cb84d30cc1a.js?vsn=d"></script><script src="/js/app-360ab02f0ea0ca476ab1ef7c813f945f.js?vsn=d"></script>
+  <!-- Plugins and scripts required by this views -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10179244-28"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', "UA-10179244-28");
+    </script>
+    
+  </body>
+</html>
