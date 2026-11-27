@@ -11,7 +11,7 @@ export const competitions = [
 // ----------------------------------------------------------------------------
 export const clubs = [
   // ---------------------------------- Men ----------------------------------
-  { id: 1,  slug: 'ncpb-men',         name: 'NCPB Men',             short: 'NCPB',      fullName: 'National Cereals & Produce Board',             location: 'Nairobi',  category: 'Senior Men', league: 'premier-men' },
+  { id: 1,  slug: 'ncpb-men',         name: 'NCPB Men',             short: 'NCPB',      fullName: 'National Cereals & Produce Board',             location: 'Nairobi',  category: 'Senior Men', league: 'premier-men',logo:'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/ulinzi.png?raw=true' },// TODO: location
   { id: 2,  slug: 'equity-men',       name: 'Equity Bank',          short: 'Equity',    fullName: 'Equity Bank Handball Club',                    location: 'Nairobi',  category: 'Senior Men', league: 'premier-men',logo:'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/equity.png?raw=true' },// TODO: location
   { id: 3,  slug: 'ulinzi-men',       name: 'Ulinzi',               short: 'Ulinzi',    fullName: 'Ulinzi Handball Club (Kenya Defence Forces)',   location: 'Langata',  category: 'Senior Men', league: 'premier-men',logo:'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/ulinzi.png?raw=true' },// TODO: location
   { id: 4,  slug: 'strathmore-men',   name: 'Strathmore Tornadoes', short: 'Tornadoes', fullName: 'Strathmore University Tornadoes',              location: 'Nairobi',  category: 'Senior Men', league: 'premier-men',logo:'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/strathmore.png?raw=true' },// TODO: location
@@ -26,14 +26,14 @@ export const clubs = [
 
   // --------------------------------- Women ---------------------------------
   { id: 14, slug: 'nairobi-water',    name: 'Nairobi Water Queens',  short: 'Nairobi Water', fullName: 'Nairobi Water',                                        location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
-  { id: 15, slug: 'ncpb-women',       name: 'NCPB Women',            short: 'NCPB W',        fullName: 'National Cereals & Produce Board',                     location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
+  { id: 15, slug: 'ncpb-women',       name: 'NCPB Women',            short: 'NCPB W',        fullName: 'National Cereals & Produce Board',                     location: 'Nairobi',  category: 'Senior Women', league: 'premier-women',logo:'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/ulinzi.png?raw=true' },// TODO: location 
   { id: 16, slug: 'ku-ladies',        name: 'KU Ladies',             short: 'KU Ladies',     fullName: 'Kenyatta University (KU Ladies)',                     location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
   { id: 17, slug: 'daystar-women',    name: 'Daystar Falcons Women', short: 'Daystar W',     fullName: 'Daystar University',                                  location: 'Machakos', category: 'Senior Women', league: 'premier-women',logo: 'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/daystar.png.png?raw=true' },
   { id: 18, slug: 'kisiwa-women',     name: 'Kisiwa NP Women',       short: 'Kisiwa W',      fullName: 'Kisiwa National Polytechnic Women',                    location: 'Bungoma',  category: 'Senior Women', league: 'premier-women' },
   { id: 19, slug: 'nys-women',        name: 'NYS',                   short: 'NYS',           fullName: 'National Youth Service',                               location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
   { id: 20, slug: 'amazon-women',     name: 'Amazon HC',             short: 'Amazon',        fullName: 'Amazon Handball Club',                                 location: 'Nairobi',  category: 'Senior Women', league: 'premier-women' },
   { id: 22, slug: 'jkuat-women',      name: 'JKUAT',                 short: 'JKUAT',         fullName: 'Jomo Kenyatta University of Agriculture & Technology', location: 'Juja',     category: 'Senior Women', league: 'premier-women' },
-  { id: 24, slug: 'ulinzi-sharks',    name: 'Ulinzi Sharks',         short: 'Sharks',        fullName: 'Ulinzi Sharks Handball Club',                          location: 'Langata',  category: 'Senior Women', league: 'premier-women' },
+  { id: 24, slug: 'ulinzi-sharks',    name: 'Ulinzi Sharks',         short: 'Sharks',        fullName: 'Ulinzi Sharks Handball Club',                          location: 'Langata',  category: 'Senior Women', league: 'premier-women',logo:'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/ulinzi.png?raw=true' },// TODO: location 
     { id: 24, slug: 'firehawks',    name: 'firehawks',         short: 'firehawks',        fullName: 'firehawks Handball Club',                          location: 'Langata',  category: 'Senior Women', league: 'premier-women' },
 
 ];
