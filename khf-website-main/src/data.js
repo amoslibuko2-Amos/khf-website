@@ -12,7 +12,7 @@ export const competitions = [
 export const clubs = [
   // ---------------------------------- Men ----------------------------------
   { id: 1,  slug: 'ncpb-men',         name: 'NCPB Men',             short: 'NCPB',      fullName: 'National Cereals & Produce Board',             location: 'Nairobi',  category: 'Senior Men', league: 'premier-men' },
-  { id: 2,  slug: 'equity-men',       name: 'Equity Bank',          short: 'Equity',    fullName: 'Equity Bank Handball Club',                    location: 'Nairobi',  category: 'Senior Men', league: 'premier-men'logo:'' },// TODO: location
+  { id: 2,  slug: 'equity-men',       name: 'Equity Bank',          short: 'Equity',    fullName: 'Equity Bank Handball Club',                    location: 'Nairobi',  category: 'Senior Men', league: 'premier-men',logo:'https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/equity.png?raw=true' },// TODO: location
   { id: 3,  slug: 'ulinzi-men',       name: 'Ulinzi',               short: 'Ulinzi',    fullName: 'Ulinzi Handball Club (Kenya Defence Forces)',   location: 'Langata',  category: 'Senior Men', league: 'premier-men' },
   { id: 4,  slug: 'strathmore-men',   name: 'Strathmore Tornadoes', short: 'Tornadoes', fullName: 'Strathmore University Tornadoes',              location: 'Nairobi',  category: 'Senior Men', league: 'premier-men' },
   { id: 5,  slug: 'gsu-men',          name: 'GSU',                  short: 'GSU',       fullName: 'General Service Unit',                         location: 'Nairobi',  category: 'Senior Men', league: 'premier-men' },
