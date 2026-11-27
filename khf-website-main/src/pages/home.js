@@ -141,7 +141,7 @@ export default function home() {
         </div>
         <div class="card p-5 text-center">
           <div class="w-20 h-20 rounded-full bg-white border border-slate-200 overflow-hidden grid place-items-center mx-auto mb-3 p-1">
-            <img src="/logos/daystar.png.png" alt="Daystar Logo" class="w-full h-full object-contain" />
+            <img src="https://github.com/amoslibuko2-Amos/khf-website/blob/main/public/logos/daystar.png.png?raw=true" alt="Daystar Logo" class="w-full h-full object-contain" />
           </div>
           <h3 class="font-semibold">Daystar HC</h3>
           <p class="text-xs text-slate-500">Premier League Men</p>
