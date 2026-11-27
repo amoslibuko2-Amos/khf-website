@@ -13,6 +13,7 @@ const links = [
   { href: '#/resources', label: 'Resources' },
   { href: '#/partners', label: 'Partners' },
   { href: '#/contact', label: 'Contact' },
+  {href:'#/technical,label:'technical'},
 ];
 
 export function header(activePath) {
