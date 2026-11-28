@@ -1,266 +1,361 @@
 
-/* ============================================
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
    KENYA HANDBALL FEDERATION
-   KENYAN NATIONAL FLAG DESIGN
-   BLACK • RED • GREEN • WHITE
-   ============================================ */
+   OFFICIAL KENYAN FLAG COLOUR THEME
+   BLACK - RED - WHITE - GREEN
+   ========================================== */
 
 :root {
-  --kenya-black: #111111;
-  --kenya-red: #bb0000;
-  --kenya-green: #006b3f;
-  --kenya-white: #ffffff;
-  --kenya-light: #f5f7f6;
+  --khf-black: #111111;
+  --khf-red: #bb0000;
+  --khf-green: #006b3f;
+  --khf-white: #ffffff;
+  --khf-background: #f7f8f7;
+  --khf-text: #252525;
 }
 
-/* GLOBAL */
-body {
-  background: var(--kenya-light);
-  color: #202020;
-  font-family: Arial, Helvetica, sans-serif;
+/* GLOBAL STYLES */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply antialiased;
+    background: var(--khf-background);
+    color: var(--khf-text);
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  h1, h2, h3, h4, .font-head {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--khf-green);
+    outline-offset: 3px;
+  }
 }
 
-h1, h2, h3, h4 {
-  font-family: Georgia, "Times New Roman", serif;
+/* ==========================================
+   REUSABLE COMPONENTS
+   ========================================== */
+
+@layer components {
+
+  .container-x {
+    @apply w-[92%] max-w-[1240px] mx-auto;
+  }
+
+  /* SECTION TITLES */
+
+  .section-title {
+    @apply font-head text-2xl md:text-3xl font-bold relative pl-4;
+    color: var(--khf-black);
+    letter-spacing: .5px;
+  }
+
+  .section-title::before {
+    content: '';
+    @apply absolute left-0 top-[15%] bottom-[15%] w-[5px] rounded;
+    background: var(--khf-red);
+  }
+
+  /* BUTTONS */
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5 font-semibold text-sm transition duration-200;
+    border-radius: 6px;
+  }
+
+  .btn-primary {
+    @apply btn text-white shadow-md;
+    background: var(--khf-green);
+  }
+
+  .btn-primary:hover {
+    background: #004d2c;
+    @apply shadow-lg;
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    @apply btn bg-white/10 border border-white/30 text-white;
+  }
+
+  .btn-ghost:hover {
+    background: var(--khf-red);
+    border-color: var(--khf-red);
+    color: white;
+  }
+
+  /* CARDS */
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden;
+    border: 1px solid #e5e5e5;
+  }
+
+  .panel {
+    @apply bg-white rounded-xl shadow-sm p-5;
+    border: 1px solid #e5e5e5;
+  }
+
+  /* TAGS */
+
+  .tag {
+    @apply inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded;
+  }
+
+  .tag-league {
+    @apply tag bg-red-50 text-red-800;
+  }
+
+  .tag-women {
+    @apply tag bg-pink-100 text-pink-800;
+  }
+
+  .tag-national {
+    @apply tag bg-green-100 text-green-800;
+  }
+
+  .tag-dev {
+    @apply tag bg-amber-100 text-amber-800;
+  }
+
+  /* FIXTURES */
+
+  .fixture {
+    @apply border rounded-lg p-3 hover:bg-[#f7faf8] transition space-y-1;
+    border-color: #e5e5e5;
+    border-left: 4px solid var(--khf-green);
+  }
+
+  /* MATCH STATUSES */
+
+  .status-scheduled {
+    @apply text-[11px] font-bold uppercase tracking-wide text-sky-800 bg-sky-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  .status-live {
+    @apply text-[11px] font-bold uppercase tracking-wide text-white bg-red-600 px-2.5 py-1 rounded-full self-start animate-pulse;
+  }
+
+  .status-completed {
+    @apply text-[11px] font-bold uppercase tracking-wide text-green-800 bg-green-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  .status-postponed {
+    @apply text-[11px] font-bold uppercase tracking-wide text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  .status-cancelled {
+    @apply text-[11px] font-bold uppercase tracking-wide text-red-800 bg-red-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  /* TABLES */
+
+  .table-mini {
+    @apply w-full border-collapse;
+  }
+
+  .table-mini th {
+    @apply text-left text-[11px] uppercase tracking-wide font-bold pb-2 px-2 whitespace-nowrap;
+    background: var(--khf-black);
+    color: white;
+    border-bottom: 3px solid var(--khf-red);
+  }
+
+  .table-mini td {
+    @apply py-2 px-2 text-sm border-b border-[#eeeeee] tabular-nums;
+  }
+
+  .table-mini tbody tr:nth-child(even) td {
+    background: #f3f7f4;
+  }
+
+  .table-mini tbody tr:hover td {
+    background: #e6f3eb;
+  }
+
+  /* PAGE HERO */
+
+  .page-hero {
+    @apply text-white py-16 relative overflow-hidden;
+    background: var(--khf-black);
+    border-bottom: 5px solid var(--khf-green);
+  }
+
+  .page-hero::before {
+    content: '';
+    @apply absolute inset-0 opacity-30;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDSVCy-cTTbI-kza50Zt5NfeM-X7UkOsuojBLjORRoQ&s=10');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .page-hero::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(
+      105deg,
+      rgb(0 0 0 / 95%) 0%,
+      rgb(90 0 0 / 75%) 55%,
+      rgb(0 70 40 / 55%) 100%
+    );
+  }
+
+  .page-hero > * {
+    @apply relative z-10;
+  }
+
+  /* FOOTER */
+
+  .site-footer {
+    @apply text-[#f5f5f5] py-10;
+    background: var(--khf-black);
+    border-top: 5px solid var(--khf-red);
+  }
+
+  .site-footer a {
+    @apply text-white underline underline-offset-2 transition;
+  }
+
+  .site-footer a:hover {
+    color: #4ade80;
+  }
 }
 
-/* HEADER */
+/* ==========================================
+   HEADER - KENYAN FLAG DESIGN
+   ========================================== */
+
 header {
-  background: var(--kenya-black) !important;
-  color: white !important;
-  border-bottom: 5px solid var(--kenya-red) !important;
-  box-shadow: 0 5px 20px rgba(0,0,0,.2);
   position: sticky !important;
   top: 0;
   z-index: 100;
+  background: var(--khf-black) !important;
+  color: white !important;
+  border-bottom: 0 !important;
+  box-shadow: 0 5px 20px rgba(0,0,0,.2);
 }
 
-/* Kenyan flag stripe */
+/* Kenyan flag colour divider */
+
 header::after {
   content: "";
-  display: block;
   position: absolute;
-  bottom: -5px;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   height: 5px;
+
   background: linear-gradient(
     to right,
-    #000 0 25%,
+    #000000 0 25%,
     #bb0000 25% 50%,
-    #fff 50% 65%,
-    #006b3f 65% 100%
+    #ffffff 50% 75%,
+    #006b3f 75% 100%
   );
 }
 
-header a,
-header a:visited {
-  color: white !important;
-  text-decoration: none !important;
-}
+/* NAVIGATION */
 
 header nav a {
-  padding: 9px 10px;
-  border-radius: 5px;
-  font-weight: 700;
-  transition: .2s ease;
+  color: white !important;
+  border-radius: 6px;
+  padding: 8px 12px;
+  text-decoration: none !important;
+  transition: background-color 200ms ease;
 }
 
-header nav a:hover,
-header nav a.active,
-header nav a[aria-current="page"] {
-  background: var(--kenya-red) !important;
+header nav a:hover {
+  background: var(--khf-red);
   color: white !important;
 }
 
-/* HERO */
+header nav a.active,
+header nav a[aria-current="page"] {
+  background: var(--khf-green);
+  color: white !important;
+}
+
+/* HEADER LINKS */
+
+header a,
+header a:visited {
+  color: white;
+}
+
+/* ==========================================
+   HOMEPAGE HERO SLIDESHOW
+   PRESERVES YOUR EXISTING SLIDES
+   ========================================== */
+
 main > section:has(.hero-slide) {
-  background: var(--kenya-black);
   min-height: 90vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--khf-black);
+}
+
+.hero-slide {
+  background-size: cover !important;
+  background-position: center center !important;
+  will-change: opacity;
+  transition: opacity 1.5s ease-in-out;
 }
 
 main > section:has(.hero-slide) > div:nth-child(2) {
   background: linear-gradient(
     90deg,
-    rgba(0,0,0,.95),
-    rgba(20,20,20,.75),
-    rgba(0,0,0,.25)
+    rgba(0,0,0,.95) 0%,
+    rgba(20,20,20,.78) 48%,
+    rgba(0,0,0,.25) 100%
   ) !important;
+}
+
+main > section:has(.hero-slide) > .container-x {
+  max-width: 1240px;
+  padding-top: 145px;
+  padding-bottom: 100px;
 }
 
 main > section:has(.hero-slide) h1 {
-  color: white !important;
-  font-family: Georgia, serif;
-  font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: bold;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  font-weight: 700;
+  max-width: 900px;
+  color: white;
 }
 
 main > section:has(.hero-slide) p {
+  line-height: 1.8;
   color: #eeeeee;
 }
 
-/* SECTION HEADINGS */
-.section-title {
-  color: var(--kenya-black) !important;
-  border-left: 5px solid var(--kenya-red);
-  padding-left: 15px;
-}
+/* ==========================================
+   GENERAL WEBSITE DECORATION
+   ========================================== */
 
-.section-title::before {
-  background: var(--kenya-green) !important;
-}
-
-/* BUTTONS */
-.btn-primary {
-  background: var(--kenya-green) !important;
-  color: white !important;
-  border: 1px solid var(--kenya-green);
-  border-radius: 5px;
-}
-
-.btn-primary:hover {
-  background: #004d2c !important;
-  transform: translateY(-2px);
-}
-
-.btn-ghost {
-  background: transparent !important;
-  border: 1px solid white !important;
-  color: white !important;
-  border-radius: 5px;
-}
-
-.btn-ghost:hover {
-  background: var(--kenya-red) !important;
-  border-color: var(--kenya-red) !important;
-}
-
-/* CARDS */
-.card,
-.panel {
-  background: white;
-  border: 1px solid #e4e4e4;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0,0,0,.06);
-  transition: .25s ease;
-}
+/* Card hover effects */
 
 .card:hover,
 .panel:hover {
-  box-shadow: 0 12px 28px rgba(0,0,0,.12);
-  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.10);
 }
 
-/* FIXTURES AND RESULTS */
-.fixture {
-  background: white;
-  border-left: 4px solid var(--kenya-red);
-  border-radius: 7px;
-  padding: 15px;
-  margin-bottom: 10px;
-}
+/* Images */
 
-.fixture:hover {
-  background: #f0f8f3;
-}
-
-/* STANDINGS */
-.table-mini th {
-  background: var(--kenya-black) !important;
-  color: white !important;
-  padding: 14px;
-}
-
-.table-mini td {
-  padding: 12px;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.table-mini tbody tr:nth-child(even) {
-  background: #f1f7f3;
-}
-
-.table-mini tbody tr:hover {
-  background: #e3f1e8;
-}
-
-/* STATUS LABELS */
-.status-live {
-  background: var(--kenya-red) !important;
-}
-
-.status-completed {
-  background: var(--kenya-green) !important;
-  color: white !important;
-}
-
-/* PAGE BANNERS */
-.page-hero {
-  background: var(--kenya-black) !important;
-  border-bottom: 5px solid var(--kenya-green);
-}
-
-.page-hero::after {
-  background: linear-gradient(
-    100deg,
-    rgba(0,0,0,.95),
-    rgba(80,0,0,.65),
-    rgba(0,70,40,.5)
-  ) !important;
-}
-
-.page-hero h1,
-.page-hero h2,
-.page-hero p {
-  color: white !important;
-}
-
-/* TAGS */
-.tag-league {
-  background: #fce8e8 !important;
-  color: var(--kenya-red) !important;
-}
-
-.tag-national {
-  background: #e4f4e9 !important;
-  color: var(--kenya-green) !important;
-}
-
-/* FORMS */
-input,
-select,
-textarea {
-  border: 1px solid #d5d5d5;
-  border-radius: 6px;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: var(--kenya-green);
-  outline: 2px solid rgba(0,107,63,.15);
-}
-
-/* FOOTER */
-.site-footer {
-  background: var(--kenya-black) !important;
-  color: white !important;
-  border-top: 5px solid var(--kenya-red);
-}
-
-.site-footer h4 {
-  color: white !important;
-}
-
-.site-footer a {
-  color: #eeeeee !important;
-}
-
-.site-footer a:hover {
-  color: #48c987 !important;
-}
-
-/* IMAGES */
 .card img {
   transition: transform .4s ease;
 }
@@ -269,20 +364,64 @@ textarea:focus {
   transform: scale(1.03);
 }
 
-/* MOBILE */
+/* Buttons */
+
+.btn-primary {
+  transition: all .25s ease;
+}
+
+/* General links */
+
+main a {
+  transition: color .2s ease;
+}
+
+/* Section spacing */
+
+main > section:not(:has(.hero-slide)) {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   ========================================== */
+
 @media (max-width: 767px) {
+
   main > section:has(.hero-slide) {
     min-height: 82vh;
   }
 
+  main > section:has(.hero-slide) > .container-x {
+    padding-top: 110px;
+    padding-bottom: 65px;
+  }
+
   main > section:has(.hero-slide) h1 {
-    font-size: clamp(2.5rem, 11vw, 4rem);
+    font-size: clamp(2.6rem, 12vw, 4rem);
+    letter-spacing: -1px;
+  }
+
+  main > section:not(:has(.hero-slide)) {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .card,
   .panel {
-    border-radius: 8px;
+    border-radius: 10px;
   }
 }
 
-/* END KENYAN FLAG DESIGN */
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide,
+  .card,
+  .fixture {
+    transition: none !important;
+  }
+}
+
+/* END OF KENYA HANDBALL FEDERATION THEME */
