@@ -147,3 +147,110 @@ header::after {
   background: rgb(255 255 255 / 12%);
 }
  */
+
+
+
+.bg-khf-red {
+  background: #8b1e4d !important;
+}
+
+.site-footer {
+  background: #141c2b;
+  border-top: 4px solid #16834b;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #f4c64e;
+}
+
+/* Mobile navigation and responsive spacing */
+@media (min-width: 768px) {
+  header > .container-x {
+    grid-template-areas:
+      "brand brand"
+      "nav nav";
+  }
+
+  #navToggle {
+    display: none !important;
+  }
+
+  #mainNav {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 767px) {
+  header > .container-x {
+    width: 94%;
+    grid-template-areas:
+      "brand toggle"
+      "nav nav";
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  header > .container-x > a:first-child img {
+    width: 45px;
+    height: 45px;
+  }
+
+  header > .container-x > a:first-child strong {
+    font-size: 17px;
+  }
+
+  #mainNav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    max-height: min(65vh, 520px);
+    overflow-y: auto;
+    padding: 8px 0 12px;
+  }
+
+  #mainNav.hidden {
+    display: none !important;
+  }
+
+  #mainNav.flex {
+    display: flex !important;
+  }
+
+  #mainNav a {
+    width: 100%;
+    padding: 11px 13px;
+    font-size: 14px;
+  }
+
+  main > section:has(.hero-slide) {
+    min-height: 650px;
+  }
+
+  main > section:has(.hero-slide) h1 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
