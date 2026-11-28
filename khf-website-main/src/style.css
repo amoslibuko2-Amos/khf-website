@@ -1,395 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* =========================================================
-   KHF COMPLETE WEBSITE DESIGN UPGRADE
-   All pages | All sections | All existing components
-   Appearance only — preserve existing website functionality
-   ========================================================= */
-
-/* 1. GLOBAL WEBSITE APPEARANCE */
-
-:root {
-  --khf-navy: #101a32;
-  --khf-navy-light: #1c2b49;
-  --khf-green: #16864e;
-  --khf-green-light: #eaf6ef;
-  --khf-white: #ffffff;
-  --khf-background: #f4f6f9;
-  --khf-border: #e4e9f0;
-  --khf-text: #263247;
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { @apply bg-[#faf7f9] text-[#291322] antialiased; font-family: 'Times New Roman', Times, serif; }
+  h1, h2, h3, h4, .font-head { font-family: 'Times New Roman', Times, serif; }
+  :focus-visible { outline: 3px solid #15803d; outline-offset: 3px; }
 }
 
-body {
-  background: var(--khf-background);
-  color: var(--khf-text);
+@layer components {
+  .container-x { @apply w-[92%] max-w-[1240px] mx-auto; }
+
+  .section-title {
+    @apply font-head text-2xl md:text-3xl font-bold uppercase tracking-wide relative pl-4 text-[#66113D];
+  }
+  .section-title::before {
+    content: '';
+    @apply absolute left-0 top-[15%] bottom-[15%] w-[5px] rounded bg-[#15803d];
+  }
+
+  .btn { @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5 rounded-full font-semibold text-sm transition duration-200; }
+  .btn-primary { @apply btn bg-[#66113D] text-white shadow-md hover:bg-[#4d0d2e] hover:shadow-lg; }
+  .btn-ghost { @apply btn bg-white/10 border border-white/30 text-white hover:bg-white hover:text-[#66113D] hover:border-white; }
+
+  .card { @apply bg-white rounded-xl border border-[#e9dfe5] shadow-sm hover:shadow-lg transition overflow-hidden; }
+  .panel { @apply bg-white rounded-xl border border-[#e9dfe5] shadow-sm p-5; }
+
+  .tag { @apply inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded; }
+  .tag-league { @apply tag bg-[#f6e9f0] text-[#66113D]; }
+  .tag-women { @apply tag bg-pink-100 text-pink-800; }
+  .tag-national { @apply tag bg-green-100 text-green-800; }
+  .tag-dev { @apply tag bg-amber-100 text-amber-800; }
+
+  .fixture { @apply border border-[#e9dfe5] border-l-[3px] border-l-[#15803d] rounded-lg p-3 hover:bg-[#fdfafb] hover:border-[#ceb1c1] transition space-y-1; }
+
+  .status-scheduled { @apply text-[11px] font-bold uppercase tracking-wide text-sky-800 bg-sky-100 px-2.5 py-1 rounded-full self-start; }
+  .status-live { @apply text-[11px] font-bold uppercase tracking-wide text-white bg-red-600 px-2.5 py-1 rounded-full self-start animate-pulse; }
+  .status-completed { @apply text-[11px] font-bold uppercase tracking-wide text-green-800 bg-green-100 px-2.5 py-1 rounded-full self-start; }
+  .status-postponed { @apply text-[11px] font-bold uppercase tracking-wide text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full self-start; }
+  .status-cancelled { @apply text-[11px] font-bold uppercase tracking-wide text-red-800 bg-red-100 px-2.5 py-1 rounded-full self-start; }
+
+  .table-mini { @apply w-full border-collapse; }
+  .table-mini th { @apply text-left text-[11px] uppercase tracking-wide text-[#66113D] font-bold pb-2 px-2 bg-[#f6edf2] border-b-2 border-[#dfcad6] whitespace-nowrap; }
+  .table-mini td { @apply py-2 px-2 text-sm border-b border-[#f0e8ed] tabular-nums; }
+  .table-mini tbody tr:nth-child(even) td { @apply bg-[#fdfafb]; }
+  .table-mini tbody tr:hover td { @apply bg-[#f2f8f3]; }
+
+  .page-hero { @apply bg-[#66113D] text-white py-16 relative overflow-hidden border-b-4 border-[#15803d]; }
+  .page-hero::before {
+    content: '';
+    @apply absolute inset-0 opacity-30;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDSVCy-cTTbI-kza50Zt5NfeM-X7UkOsuojBLjORRoQ&s=10');
+    background-size: cover;
+    background-position: center;
+  }
+  .page-hero::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(105deg, rgb(77 13 46 / 92%) 0%, rgb(102 17 61 / 70%) 55%, rgb(102 17 61 / 35%) 100%);
+  }
+  .page-hero > * { @apply relative z-10; }
+
+  .site-footer { @apply bg-[#4d0d2e] text-[#f5e7ef] py-10 border-t-4 border-[#15803d]; }
+  .site-footer a { @apply text-white underline underline-offset-2 hover:text-[#f5e7ef]; }
 }
-
-::selection {
-  background: var(--khf-green);
-  color: white;
-}
-
-img {
-  max-width: 100%;
-}
-
-/* 2. HEADER AND NAVIGATION */
-
+/* ===== KHF header: burgundy + Kenyan divider ===== */
 header {
-  background: var(--khf-navy) !important;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, .15);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #66113d !important;
+  color: #fff;
+  border-bottom: 0 !important;
+  position: relative;
 }
 
+/* divider: white → green → black */
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    #fff 0 33.34%,
+    #15803d 33.34% 66.67%,
+    #000 66.67% 100%
+  );
+}
+
+/* nav */
 header nav a {
+  color: #fff !important;
   border-radius: 6px;
-  margin: 2px;
-  transition: all .25s ease;
+  padding: 8px 12px;
+  transition: background-color 160ms ease;
 }
 
 header nav a:hover {
-  background: rgba(22, 134, 78, .22) !important;
-  color: #4ade80 !important;
-  transform: translateY(-1px);
+  background: rgb(255 255 255 / 14%);
 }
 
-header button {
-  border-radius: 6px;
-  transition: background .2s ease;
+header nav a.active,
+header nav a[aria-current="page"] {
+  background: rgb(255 255 255 / 20%);
 }
-
-header button:hover {
-  background: rgba(255, 255, 255, .12);
-}
-
-/* 3. ALL PAGE HEADINGS */
-
-main h1,
-main h2,
-main h3 {
-  color: var(--khf-navy);
-}
-
-main h1 {
-  font-weight: 700;
-}
-
-main h2 {
-  letter-spacing: -.5px;
-}
-
-.section-title {
-  padding-bottom: 12px;
-  margin-bottom: 25px;
-}
-
-.section-title::after {
+/* divider: black → white → red → white → green */
+header::after {
   content: "";
-  display: block;
-  width: 55px;
-  height: 3px;
-  background: var(--khf-green);
-  margin-top: 12px;
-  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    #000 0 33.33%,
+    #fff 33.33% 41.67%,
+    #bb0000 41.67% 66.67%,
+    #fff 66.67% 75%,
+    #15803d 75% 100%
+  );
+}
+/* Burgundy header
+.main-header {
+  background: #66113d;
+  color: #fff;
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #fff 0%, #fff 33.33%,
+    #15803d 33.33%, #15803d 66.66%,
+    #000 66.66%, #000 100%
+  ) 1;
 }
 
-/* 4. PAGE HERO BANNERS */
-
-.page-hero {
-  background-color: var(--khf-navy) !important;
-  border-bottom: 5px solid var(--khf-green);
+.main-header a,
+.main-header button {
+  color: #fff;
 }
 
-.page-hero h1,
-.page-hero h2,
-.page-hero p {
-  color: white !important;
+.main-header nav a:hover {
+  background: rgb(255 255 255 / 12%);
 }
+ */
 
-/* 5. ALL CARDS */
 
-.card,
-.panel {
-  background: white;
-  border: 1px solid var(--khf-border);
-  border-radius: 13px;
-  box-shadow: 0 5px 20px rgba(16, 26, 50, .045);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
 
-.card:hover,
-.panel:hover {
-  box-shadow: 0 14px 32px rgba(16, 26, 50, .10);
-}
 
-.card {
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.card:hover img {
-  filter: saturate(1.08);
-}
-
-/* 6. NEWS AND ARTICLES */
-
-article {
-  transition: transform .25s ease;
-}
-
-article:hover {
-  transform: translateY(-3px);
-}
-
-main a {
-  transition: color .2s ease;
-}
-
-main a:hover {
-  color: var(--khf-green);
-}
-
-/* 7. FIXTURES AND RESULTS */
-
-.fixture {
-  background: white;
-  border: 1px solid var(--khf-border);
-  border-left: 4px solid var(--khf-green);
-  border-radius: 10px;
-  margin-bottom: 12px;
-  padding: 16px;
-  transition: all .2s ease;
-}
-
-.fixture:hover {
-  background: #f4faf6;
-  box-shadow: 0 5px 15px rgba(16, 26, 50, .07);
-  transform: translateY(-2px);
-}
-
-/* 8. STANDINGS AND STATISTICS TABLES */
-
-.table-mini {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.table-mini th {
-  background: var(--khf-navy);
-  color: white;
-  padding: 15px 12px;
-}
-
-.table-mini td {
-  padding: 13px 12px;
-}
-
-.table-mini tbody tr {
-  transition: background .2s ease;
-}
-
-.table-mini tbody tr:hover td {
-  background: var(--khf-green-light);
-}
-
-/* 9. CLUBS AND NATIONAL TEAMS */
-
-main a.group {
-  border-radius: 13px;
-  overflow: hidden;
-  background: white;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-main a.group:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(16, 26, 50, .13);
-}
-
-main a.group img {
-  transition: transform .45s ease;
-}
-
-main a.group:hover img {
-  transform: scale(1.05);
-}
-
-/* 10. GALLERY AND MEDIA */
-
-main img {
-  border-radius: 5px;
-}
-
-main a:has(img) {
-  overflow: hidden;
-}
-
-main a:has(img):hover img {
-  filter: brightness(.92);
-}
-
-/* 11. TAGS AND LABELS */
-
-.tag,
-.status-scheduled,
-.status-live,
-.status-completed,
-.status-postponed,
-.status-cancelled {
-  letter-spacing: .5px;
-  font-weight: 800;
-}
-
-/* 12. BUTTONS */
-
-.btn {
-  border-radius: 6px;
-  font-weight: 700;
-  letter-spacing: .2px;
-  transition: all .25s ease;
-}
-
-.btn-primary {
-  background: var(--khf-green) !important;
-  color: white !important;
-}
-
-.btn-primary:hover {
-  background: #09683a !important;
-  box-shadow: 0 7px 18px rgba(22, 134, 78, .2);
-  transform: translateY(-2px);
-}
-
-button {
-  cursor: pointer;
-}
-
-/* 13. FORMS AND INPUT FIELDS */
-
-input,
-select,
-textarea {
-  max-width: 100%;
-  border: 1px solid #dce2ea;
-  border-radius: 7px;
-  padding: 11px 13px;
-  background: white;
-  color: var(--khf-text);
-  transition: border-color .2s ease, box-shadow .2s ease;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--khf-green);
-  box-shadow: 0 0 0 3px rgba(22, 134, 78, .12);
-}
-
-label {
-  font-weight: 700;
-  color: var(--khf-navy);
-}
-
-/* 14. FOOTER */
-
-.site-footer {
-  background: #0b1428 !important;
-  color: #dce4ef;
-  border-top: 5px solid var(--khf-green);
-  padding-top: 55px;
-}
-
-.site-footer h4 {
-  color: white;
-  margin-bottom: 16px;
-}
-
-.site-footer a {
-  color: #dce4ef;
-  text-decoration: none;
-  transition: color .2s ease;
-}
-
-.site-footer a:hover {
-  color: #4ade80;
-}
-
-/* 15. GENERAL SECTION SPACING */
-
-main > section {
-  scroll-margin-top: 90px;
-}
-
-main > section:not(:has(.hero-slide)) {
-  padding-top: 55px;
-  padding-bottom: 55px;
-}
-
-/* 16. LINKS AND INTERACTIVE ELEMENTS */
-
-a,
-button {
-  -webkit-tap-highlight-color: transparent;
-}
-
-button:focus-visible,
-a:focus-visible {
-  outline: 3px solid #16864e;
-  outline-offset: 3px;
-}
-
-/* 17. MOBILE DESIGN */
-
-@media (max-width: 767px) {
-  .container-x {
-    width: 94%;
-  }
-
-  main > section:not(:has(.hero-slide)) {
-    padding-top: 38px;
-    padding-bottom: 38px;
-  }
-
-  .section-title {
-    font-size: 1.65rem;
-  }
-
-  .card,
-  .panel {
-    border-radius: 10px;
-  }
-
-  .fixture {
-    padding: 12px;
-  }
-
-  .table-mini {
-    font-size: 12px;
-  }
-
-  .table-mini th,
-  .table-mini td {
-    padding: 10px 7px;
-  }
-
-  .site-footer {
-    padding-top: 38px;
-  }
-}
-
-/* 18. ANIMATIONS */
-
-@media (prefers-reduced-motion: no-preference) {
-  .card,
-  .panel,
-  .fixture,
-  main a.group {
-    transition: transform .25s ease, box-shadow .25s ease;
-  }
-}
-
-/* END OF KHF COMPLETE DESIGN UPGRADE */
