@@ -1,53 +1,174 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* =====================================================
+   1. GLOBAL STYLES
+   ===================================================== */
+
 @layer base {
-  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-  body { @apply bg-[#faf7f9] text-[#291322] antialiased; font-family: 'Times New Roman', Times, serif; }
-  h1, h2, h3, h4, .font-head { font-family: 'Times New Roman', Times, serif; }
-  :focus-visible { outline: 3px solid #15803d; outline-offset: 3px; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-[#f5f7fa] text-[#182238] antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-head {
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  :focus-visible {
+    outline: 3px solid #16864e;
+    outline-offset: 3px;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
+/* =====================================================
+   2. REUSABLE COMPONENTS
+   ===================================================== */
+
 @layer components {
-  .container-x { @apply w-[92%] max-w-[1240px] mx-auto; }
+  .container-x {
+    @apply w-[92%] max-w-[1240px] mx-auto;
+  }
 
   .section-title {
-    @apply font-head text-2xl md:text-3xl font-bold uppercase tracking-wide relative pl-4 text-[#66113D];
+    @apply font-head text-2xl md:text-3xl font-bold relative pl-4;
+    color: #101a32;
+    letter-spacing: -.5px;
+    text-transform: none;
   }
+
   .section-title::before {
     content: '';
-    @apply absolute left-0 top-[15%] bottom-[15%] w-[5px] rounded bg-[#15803d];
+    @apply absolute left-0 top-[15%] bottom-[15%] w-[5px] rounded;
+    background: #16864e;
   }
 
-  .btn { @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5 rounded-full font-semibold text-sm transition duration-200; }
-  .btn-primary { @apply btn bg-[#66113D] text-white shadow-md hover:bg-[#4d0d2e] hover:shadow-lg; }
-  .btn-ghost { @apply btn bg-white/10 border border-white/30 text-white hover:bg-white hover:text-[#66113D] hover:border-white; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5 font-semibold text-sm transition duration-200;
+    border-radius: 5px;
+  }
 
-  .card { @apply bg-white rounded-xl border border-[#e9dfe5] shadow-sm hover:shadow-lg transition overflow-hidden; }
-  .panel { @apply bg-white rounded-xl border border-[#e9dfe5] shadow-sm p-5; }
+  .btn-primary {
+    @apply btn text-white shadow-md;
+    background: #16864e;
+  }
 
-  .tag { @apply inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded; }
-  .tag-league { @apply tag bg-[#f6e9f0] text-[#66113D]; }
-  .tag-women { @apply tag bg-pink-100 text-pink-800; }
-  .tag-national { @apply tag bg-green-100 text-green-800; }
-  .tag-dev { @apply tag bg-amber-100 text-amber-800; }
+  .btn-primary:hover {
+    background: #09683a;
+    transform: translateY(-2px);
+  }
 
-  .fixture { @apply border border-[#e9dfe5] border-l-[3px] border-l-[#15803d] rounded-lg p-3 hover:bg-[#fdfafb] hover:border-[#ceb1c1] transition space-y-1; }
+  .btn-ghost {
+    @apply btn bg-white/10 border border-white/30 text-white;
+  }
 
-  .status-scheduled { @apply text-[11px] font-bold uppercase tracking-wide text-sky-800 bg-sky-100 px-2.5 py-1 rounded-full self-start; }
-  .status-live { @apply text-[11px] font-bold uppercase tracking-wide text-white bg-red-600 px-2.5 py-1 rounded-full self-start animate-pulse; }
-  .status-completed { @apply text-[11px] font-bold uppercase tracking-wide text-green-800 bg-green-100 px-2.5 py-1 rounded-full self-start; }
-  .status-postponed { @apply text-[11px] font-bold uppercase tracking-wide text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full self-start; }
-  .status-cancelled { @apply text-[11px] font-bold uppercase tracking-wide text-red-800 bg-red-100 px-2.5 py-1 rounded-full self-start; }
+  .btn-ghost:hover {
+    @apply bg-white text-[#101a32] border-white;
+  }
 
-  .table-mini { @apply w-full border-collapse; }
-  .table-mini th { @apply text-left text-[11px] uppercase tracking-wide text-[#66113D] font-bold pb-2 px-2 bg-[#f6edf2] border-b-2 border-[#dfcad6] whitespace-nowrap; }
-  .table-mini td { @apply py-2 px-2 text-sm border-b border-[#f0e8ed] tabular-nums; }
-  .table-mini tbody tr:nth-child(even) td { @apply bg-[#fdfafb]; }
-  .table-mini tbody tr:hover td { @apply bg-[#f2f8f3]; }
+  .card {
+    @apply bg-white border border-[#e6eaf0] shadow-sm transition overflow-hidden;
+    border-radius: 12px;
+  }
 
-  .page-hero { @apply bg-[#66113D] text-white py-16 relative overflow-hidden border-b-4 border-[#15803d]; }
+  .card:hover {
+    @apply shadow-lg;
+    transform: translateY(-4px);
+  }
+
+  .panel {
+    @apply bg-white border border-[#e6eaf0] shadow-sm p-5;
+    border-radius: 12px;
+  }
+
+  .tag {
+    @apply inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded;
+  }
+
+  .tag-league {
+    @apply tag bg-[#e8f4ed] text-[#12643c];
+  }
+
+  .tag-women {
+    @apply tag bg-pink-100 text-pink-800;
+  }
+
+  .tag-national {
+    @apply tag bg-green-100 text-green-800;
+  }
+
+  .tag-dev {
+    @apply tag bg-amber-100 text-amber-800;
+  }
+
+  .fixture {
+    @apply border border-[#e6eaf0] border-l-[3px] rounded-lg p-3 transition space-y-1;
+    border-left-color: #16864e;
+  }
+
+  .fixture:hover {
+    background: #f0f8f3;
+  }
+
+  .status-scheduled {
+    @apply text-[11px] font-bold uppercase tracking-wide text-sky-800 bg-sky-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  .status-live {
+    @apply text-[11px] font-bold uppercase tracking-wide text-white bg-red-600 px-2.5 py-1 rounded-full self-start animate-pulse;
+  }
+
+  .status-completed {
+    @apply text-[11px] font-bold uppercase tracking-wide text-green-800 bg-green-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  .status-postponed {
+    @apply text-[11px] font-bold uppercase tracking-wide text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  .status-cancelled {
+    @apply text-[11px] font-bold uppercase tracking-wide text-red-800 bg-red-100 px-2.5 py-1 rounded-full self-start;
+  }
+
+  .table-mini {
+    @apply w-full border-collapse;
+  }
+
+  .table-mini th {
+    @apply text-left text-[11px] uppercase tracking-wide font-bold pb-2 px-2 whitespace-nowrap;
+    background: #101a32;
+    color: white;
+  }
+
+  .table-mini td {
+    @apply py-2 px-2 text-sm border-b border-[#e9edf2] tabular-nums;
+  }
+
+  .table-mini tbody tr:nth-child(even) td {
+    background: #f7f9fb;
+  }
+
+  .table-mini tbody tr:hover td {
+    background: #edf7f0;
+  }
+
+  .page-hero {
+    @apply text-white py-16 relative overflow-hidden;
+    background: #101a32;
+    border-bottom: 4px solid #16864e;
+  }
+
   .page-hero::before {
     content: '';
     @apply absolute inset-0 opacity-30;
@@ -55,97 +176,285 @@
     background-size: cover;
     background-position: center;
   }
+
   .page-hero::after {
     content: '';
     @apply absolute inset-0;
-    background: linear-gradient(105deg, rgb(77 13 46 / 92%) 0%, rgb(102 17 61 / 70%) 55%, rgb(102 17 61 / 35%) 100%);
+    background: linear-gradient(
+      105deg,
+      rgba(8, 16, 35, .94) 0%,
+      rgba(16, 26, 50, .75) 55%,
+      rgba(16, 26, 50, .35) 100%
+    );
   }
-  .page-hero > * { @apply relative z-10; }
 
-  .site-footer { @apply bg-[#4d0d2e] text-[#f5e7ef] py-10 border-t-4 border-[#15803d]; }
-  .site-footer a { @apply text-white underline underline-offset-2 hover:text-[#f5e7ef]; }
+  .page-hero > * {
+    @apply relative z-10;
+  }
+
+  .site-footer {
+    @apply text-[#dce4ef] py-10;
+    background: #0c162b;
+    border-top: 4px solid #16864e;
+  }
+
+  .site-footer a {
+    @apply text-white transition;
+  }
+
+  .site-footer a:hover {
+    color: #39c77d;
+  }
 }
-/* ===== KHF header: burgundy + Kenyan divider ===== */
+
+/* =====================================================
+   3. PROFESSIONAL HEADER
+   ===================================================== */
+
 header {
-  position: sticky;
+  position: sticky !important;
   top: 0;
-  z-index: 50;
-  background-color: #66113d !important;
-  color: #fff;
-  border-bottom: 0 !important;
-  position: relative;
+  z-index: 100;
+  width: 100%;
+  background: rgba(12, 22, 43, .98) !important;
+  color: white !important;
+  border-bottom: 4px solid #16864e !important;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .18);
+  backdrop-filter: blur(14px);
 }
 
-/* divider: white → green → black */
-header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 5px;
-  background: linear-gradient(
-    to right,
-    #fff 0 33.34%,
-    #15803d 33.34% 66.67%,
-    #000 66.67% 100%
-  );
+/* Header content alignment */
+header .container-x {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-/* nav */
+/* Federation logo */
+header .container-x > a img {
+  width: 76px !important;
+  height: 76px !important;
+  max-width: 76px !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Federation name */
+header .container-x > a {
+  color: white !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+/* All header links */
+header a,
+header a:visited {
+  color: white !important;
+}
+
+header nav {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
 header nav a {
-  color: #fff !important;
-  border-radius: 6px;
-  padding: 8px 12px;
-  transition: background-color 160ms ease;
+  color: #e8edf5 !important;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 9px 10px;
+  border-radius: 5px;
+  transition: all .2s ease;
+  text-decoration: none !important;
 }
 
 header nav a:hover {
-  background: rgb(255 255 255 / 14%);
+  background: rgba(255, 255, 255, .12);
+  color: #39c77d !important;
 }
 
 header nav a.active,
 header nav a[aria-current="page"] {
-  background: rgb(255 255 255 / 20%);
+  background: rgba(255, 255, 255, .15);
+  color: #39c77d !important;
 }
-/* divider: black → white → red → white → green */
+
+/* Kenyan-inspired green accent line */
 header::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 5px;
+  bottom: -4px;
+  height: 4px;
   background: linear-gradient(
     to right,
-    #000 0 33.33%,
-    #fff 33.33% 41.67%,
-    #bb0000 41.67% 66.67%,
-    #fff 66.67% 75%,
-    #15803d 75% 100%
+    #ffffff 0 25%,
+    #16864e 25% 75%,
+    #ffffff 75% 100%
   );
 }
-/* Burgundy header
-.main-header {
-  background: #66113d;
-  color: #fff;
-  border-bottom: 5px solid transparent;
-  border-image: linear-gradient(
-    to right,
-    #fff 0%, #fff 33.33%,
-    #15803d 33.33%, #15803d 66.66%,
-    #000 66.66%, #000 100%
-  ) 1;
+
+/* =====================================================
+   4. HOMEPAGE HERO AND AUTOMATIC SLIDESHOW
+   ===================================================== */
+
+main > section:has(.hero-slide) {
+  min-height: 92vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #101a32;
 }
 
-.main-header a,
-.main-header button {
-  color: #fff;
+.hero-slide {
+  background-size: cover !important;
+  background-position: center center !important;
+  will-change: opacity;
+  transition: opacity 1.5s ease-in-out,
+              transform 7s ease;
+  transform: scale(1.02);
 }
 
-.main-header nav a:hover {
-  background: rgb(255 255 255 / 12%);
+main > section:has(.hero-slide) > div:nth-child(2) {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 16, 35, .96) 0%,
+    rgba(12, 24, 48, .76) 48%,
+    rgba(12, 24, 48, .25) 100%
+  ) !important;
 }
- */
 
+main > section:has(.hero-slide) > .container-x {
+  max-width: 1240px;
+  padding-top: 145px;
+  padding-bottom: 100px;
+}
 
+main > section:has(.hero-slide) h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 7vw, 6.2rem);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  font-weight: 700;
+  max-width: 900px;
+  text-wrap: balance;
+}
+
+main > section:has(.hero-slide) p {
+  max-width: 650px;
+  line-height: 1.9;
+  color: #e2e8f0;
+}
+
+/* =====================================================
+   5. BUTTONS AND CONTENT CARDS
+   ===================================================== */
+
+.btn {
+  transition: all .25s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 22px rgba(22, 134, 78, .25);
+}
+
+.card img {
+  transition: transform .4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.025);
+}
+
+main a.group {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* =====================================================
+   6. PAGE SPACING AND TABLES
+   ===================================================== */
+
+main > section:not(:has(.hero-slide)) {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.panel {
+  box-shadow: 0 5px 22px rgba(18, 31, 54, .045);
+}
+
+.fixture {
+  transition: background .2s ease, transform .2s ease;
+}
+
+.fixture:hover {
+  transform: translateX(3px);
+}
+
+/* =====================================================
+   7. FOOTER
+   ===================================================== */
+
+.site-footer h4 {
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-footer a:hover {
+  color: #39c77d;
+}
+
+/* =====================================================
+   8. MOBILE RESPONSIVENESS
+   ===================================================== */
+
+@media (max-width: 767px) {
+  header .container-x > a img {
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  header nav a {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  main > section:has(.hero-slide) {
+    min-height: 82vh;
+  }
+
+  main > section:has(.hero-slide) > .container-x {
+    padding-top: 110px;
+    padding-bottom: 65px;
+  }
+
+  main > section:has(.hero-slide) h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+    letter-spacing: -1px;
+  }
+
+  main > section:not(:has(.hero-slide)) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .card,
+  .panel {
+    border-radius: 10px;
+  }
+}
+
+/* =====================================================
+   9. REDUCED MOTION ACCESSIBILITY
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide,
+  .card,
+  .fixture {
+    transition: none !important;
+  }
+}
