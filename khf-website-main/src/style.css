@@ -1,460 +1,395 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* =========================================================
+   KHF COMPLETE WEBSITE DESIGN UPGRADE
+   All pages | All sections | All existing components
+   Appearance only — preserve existing website functionality
+   ========================================================= */
 
-/* =====================================================
-   1. GLOBAL STYLES
-   ===================================================== */
+/* 1. GLOBAL WEBSITE APPEARANCE */
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-  }
-
-  body {
-    @apply bg-[#f5f7fa] text-[#182238] antialiased;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  h1, h2, h3, h4, .font-head {
-    font-family: Georgia, "Times New Roman", serif;
-  }
-
-  :focus-visible {
-    outline: 3px solid #16864e;
-    outline-offset: 3px;
-  }
-
-  a {
-    text-decoration: none;
-  }
+:root {
+  --khf-navy: #101a32;
+  --khf-navy-light: #1c2b49;
+  --khf-green: #16864e;
+  --khf-green-light: #eaf6ef;
+  --khf-white: #ffffff;
+  --khf-background: #f4f6f9;
+  --khf-border: #e4e9f0;
+  --khf-text: #263247;
 }
 
-/* =====================================================
-   2. REUSABLE COMPONENTS
-   ===================================================== */
-
-@layer components {
-  .container-x {
-    @apply w-[92%] max-w-[1240px] mx-auto;
-  }
-
-  .section-title {
-    @apply font-head text-2xl md:text-3xl font-bold relative pl-4;
-    color: #101a32;
-    letter-spacing: -.5px;
-    text-transform: none;
-  }
-
-  .section-title::before {
-    content: '';
-    @apply absolute left-0 top-[15%] bottom-[15%] w-[5px] rounded;
-    background: #16864e;
-  }
-
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5 font-semibold text-sm transition duration-200;
-    border-radius: 5px;
-  }
-
-  .btn-primary {
-    @apply btn text-white shadow-md;
-    background: #16864e;
-  }
-
-  .btn-primary:hover {
-    background: #09683a;
-    transform: translateY(-2px);
-  }
-
-  .btn-ghost {
-    @apply btn bg-white/10 border border-white/30 text-white;
-  }
-
-  .btn-ghost:hover {
-    @apply bg-white text-[#101a32] border-white;
-  }
-
-  .card {
-    @apply bg-white border border-[#e6eaf0] shadow-sm transition overflow-hidden;
-    border-radius: 12px;
-  }
-
-  .card:hover {
-    @apply shadow-lg;
-    transform: translateY(-4px);
-  }
-
-  .panel {
-    @apply bg-white border border-[#e6eaf0] shadow-sm p-5;
-    border-radius: 12px;
-  }
-
-  .tag {
-    @apply inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded;
-  }
-
-  .tag-league {
-    @apply tag bg-[#e8f4ed] text-[#12643c];
-  }
-
-  .tag-women {
-    @apply tag bg-pink-100 text-pink-800;
-  }
-
-  .tag-national {
-    @apply tag bg-green-100 text-green-800;
-  }
-
-  .tag-dev {
-    @apply tag bg-amber-100 text-amber-800;
-  }
-
-  .fixture {
-    @apply border border-[#e6eaf0] border-l-[3px] rounded-lg p-3 transition space-y-1;
-    border-left-color: #16864e;
-  }
-
-  .fixture:hover {
-    background: #f0f8f3;
-  }
-
-  .status-scheduled {
-    @apply text-[11px] font-bold uppercase tracking-wide text-sky-800 bg-sky-100 px-2.5 py-1 rounded-full self-start;
-  }
-
-  .status-live {
-    @apply text-[11px] font-bold uppercase tracking-wide text-white bg-red-600 px-2.5 py-1 rounded-full self-start animate-pulse;
-  }
-
-  .status-completed {
-    @apply text-[11px] font-bold uppercase tracking-wide text-green-800 bg-green-100 px-2.5 py-1 rounded-full self-start;
-  }
-
-  .status-postponed {
-    @apply text-[11px] font-bold uppercase tracking-wide text-amber-800 bg-amber-100 px-2.5 py-1 rounded-full self-start;
-  }
-
-  .status-cancelled {
-    @apply text-[11px] font-bold uppercase tracking-wide text-red-800 bg-red-100 px-2.5 py-1 rounded-full self-start;
-  }
-
-  .table-mini {
-    @apply w-full border-collapse;
-  }
-
-  .table-mini th {
-    @apply text-left text-[11px] uppercase tracking-wide font-bold pb-2 px-2 whitespace-nowrap;
-    background: #101a32;
-    color: white;
-  }
-
-  .table-mini td {
-    @apply py-2 px-2 text-sm border-b border-[#e9edf2] tabular-nums;
-  }
-
-  .table-mini tbody tr:nth-child(even) td {
-    background: #f7f9fb;
-  }
-
-  .table-mini tbody tr:hover td {
-    background: #edf7f0;
-  }
-
-  .page-hero {
-    @apply text-white py-16 relative overflow-hidden;
-    background: #101a32;
-    border-bottom: 4px solid #16864e;
-  }
-
-  .page-hero::before {
-    content: '';
-    @apply absolute inset-0 opacity-30;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDSVCy-cTTbI-kza50Zt5NfeM-X7UkOsuojBLjORRoQ&s=10');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .page-hero::after {
-    content: '';
-    @apply absolute inset-0;
-    background: linear-gradient(
-      105deg,
-      rgba(8, 16, 35, .94) 0%,
-      rgba(16, 26, 50, .75) 55%,
-      rgba(16, 26, 50, .35) 100%
-    );
-  }
-
-  .page-hero > * {
-    @apply relative z-10;
-  }
-
-  .site-footer {
-    @apply text-[#dce4ef] py-10;
-    background: #0c162b;
-    border-top: 4px solid #16864e;
-  }
-
-  .site-footer a {
-    @apply text-white transition;
-  }
-
-  .site-footer a:hover {
-    color: #39c77d;
-  }
+body {
+  background: var(--khf-background);
+  color: var(--khf-text);
 }
 
-/* =====================================================
-   3. PROFESSIONAL HEADER
-   ===================================================== */
+::selection {
+  background: var(--khf-green);
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 2. HEADER AND NAVIGATION */
 
 header {
-  position: sticky !important;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  background: rgba(12, 22, 43, .98) !important;
-  color: white !important;
-  border-bottom: 4px solid #16864e !important;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, .18);
-  backdrop-filter: blur(14px);
-}
-
-/* Header content alignment */
-header .container-x {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-/* Federation logo */
-header .container-x > a img {
-  width: 76px !important;
-  height: 76px !important;
-  max-width: 76px !important;
-  object-fit: contain;
-  display: block;
-}
-
-/* Federation name */
-header .container-x > a {
-  color: white !important;
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: bold;
-  text-decoration: none !important;
-}
-
-/* All header links */
-header a,
-header a:visited {
-  color: white !important;
-}
-
-header nav {
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 3px;
+  background: var(--khf-navy) !important;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .15);
 }
 
 header nav a {
-  color: #e8edf5 !important;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 9px 10px;
-  border-radius: 5px;
-  transition: all .2s ease;
-  text-decoration: none !important;
-}
-
-header nav a:hover {
-  background: rgba(255, 255, 255, .12);
-  color: #39c77d !important;
-}
-
-header nav a.active,
-header nav a[aria-current="page"] {
-  background: rgba(255, 255, 255, .15);
-  color: #39c77d !important;
-}
-
-/* Kenyan-inspired green accent line */
-header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4px;
-  height: 4px;
-  background: linear-gradient(
-    to right,
-    #ffffff 0 25%,
-    #16864e 25% 75%,
-    #ffffff 75% 100%
-  );
-}
-
-/* =====================================================
-   4. HOMEPAGE HERO AND AUTOMATIC SLIDESHOW
-   ===================================================== */
-
-main > section:has(.hero-slide) {
-  min-height: 92vh;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  background: #101a32;
-}
-
-.hero-slide {
-  background-size: cover !important;
-  background-position: center center !important;
-  will-change: opacity;
-  transition: opacity 1.5s ease-in-out,
-              transform 7s ease;
-  transform: scale(1.02);
-}
-
-main > section:has(.hero-slide) > div:nth-child(2) {
-  background: linear-gradient(
-    90deg,
-    rgba(8, 16, 35, .96) 0%,
-    rgba(12, 24, 48, .76) 48%,
-    rgba(12, 24, 48, .25) 100%
-  ) !important;
-}
-
-main > section:has(.hero-slide) > .container-x {
-  max-width: 1240px;
-  padding-top: 145px;
-  padding-bottom: 100px;
-}
-
-main > section:has(.hero-slide) h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.2rem, 7vw, 6.2rem);
-  line-height: 1.02;
-  letter-spacing: -2px;
-  font-weight: 700;
-  max-width: 900px;
-  text-wrap: balance;
-}
-
-main > section:has(.hero-slide) p {
-  max-width: 650px;
-  line-height: 1.9;
-  color: #e2e8f0;
-}
-
-/* =====================================================
-   5. BUTTONS AND CONTENT CARDS
-   ===================================================== */
-
-.btn {
+  border-radius: 6px;
+  margin: 2px;
   transition: all .25s ease;
 }
 
-.btn-primary:hover {
-  box-shadow: 0 8px 22px rgba(22, 134, 78, .25);
+header nav a:hover {
+  background: rgba(22, 134, 78, .22) !important;
+  color: #4ade80 !important;
+  transform: translateY(-1px);
 }
 
-.card img {
-  transition: transform .4s ease;
+header button {
+  border-radius: 6px;
+  transition: background .2s ease;
 }
 
-.card:hover img {
-  transform: scale(1.025);
+header button:hover {
+  background: rgba(255, 255, 255, .12);
 }
 
-main a.group {
-  border-radius: 12px;
+/* 3. ALL PAGE HEADINGS */
+
+main h1,
+main h2,
+main h3 {
+  color: var(--khf-navy);
+}
+
+main h1 {
+  font-weight: 700;
+}
+
+main h2 {
+  letter-spacing: -.5px;
+}
+
+.section-title {
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  background: var(--khf-green);
+  margin-top: 12px;
+  border-radius: 5px;
+}
+
+/* 4. PAGE HERO BANNERS */
+
+.page-hero {
+  background-color: var(--khf-navy) !important;
+  border-bottom: 5px solid var(--khf-green);
+}
+
+.page-hero h1,
+.page-hero h2,
+.page-hero p {
+  color: white !important;
+}
+
+/* 5. ALL CARDS */
+
+.card,
+.panel {
+  background: white;
+  border: 1px solid var(--khf-border);
+  border-radius: 13px;
+  box-shadow: 0 5px 20px rgba(16, 26, 50, .045);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover,
+.panel:hover {
+  box-shadow: 0 14px 32px rgba(16, 26, 50, .10);
+}
+
+.card {
   overflow: hidden;
 }
 
-/* =====================================================
-   6. PAGE SPACING AND TABLES
-   ===================================================== */
-
-main > section:not(:has(.hero-slide)) {
-  padding-top: 65px;
-  padding-bottom: 65px;
+.card img {
+  width: 100%;
+  object-fit: cover;
 }
 
-.panel {
-  box-shadow: 0 5px 22px rgba(18, 31, 54, .045);
+.card:hover img {
+  filter: saturate(1.08);
 }
+
+/* 6. NEWS AND ARTICLES */
+
+article {
+  transition: transform .25s ease;
+}
+
+article:hover {
+  transform: translateY(-3px);
+}
+
+main a {
+  transition: color .2s ease;
+}
+
+main a:hover {
+  color: var(--khf-green);
+}
+
+/* 7. FIXTURES AND RESULTS */
 
 .fixture {
-  transition: background .2s ease, transform .2s ease;
+  background: white;
+  border: 1px solid var(--khf-border);
+  border-left: 4px solid var(--khf-green);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 16px;
+  transition: all .2s ease;
 }
 
 .fixture:hover {
-  transform: translateX(3px);
+  background: #f4faf6;
+  box-shadow: 0 5px 15px rgba(16, 26, 50, .07);
+  transform: translateY(-2px);
 }
 
-/* =====================================================
-   7. FOOTER
-   ===================================================== */
+/* 8. STANDINGS AND STATISTICS TABLES */
+
+.table-mini {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table-mini th {
+  background: var(--khf-navy);
+  color: white;
+  padding: 15px 12px;
+}
+
+.table-mini td {
+  padding: 13px 12px;
+}
+
+.table-mini tbody tr {
+  transition: background .2s ease;
+}
+
+.table-mini tbody tr:hover td {
+  background: var(--khf-green-light);
+}
+
+/* 9. CLUBS AND NATIONAL TEAMS */
+
+main a.group {
+  border-radius: 13px;
+  overflow: hidden;
+  background: white;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+main a.group:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(16, 26, 50, .13);
+}
+
+main a.group img {
+  transition: transform .45s ease;
+}
+
+main a.group:hover img {
+  transform: scale(1.05);
+}
+
+/* 10. GALLERY AND MEDIA */
+
+main img {
+  border-radius: 5px;
+}
+
+main a:has(img) {
+  overflow: hidden;
+}
+
+main a:has(img):hover img {
+  filter: brightness(.92);
+}
+
+/* 11. TAGS AND LABELS */
+
+.tag,
+.status-scheduled,
+.status-live,
+.status-completed,
+.status-postponed,
+.status-cancelled {
+  letter-spacing: .5px;
+  font-weight: 800;
+}
+
+/* 12. BUTTONS */
+
+.btn {
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  transition: all .25s ease;
+}
+
+.btn-primary {
+  background: var(--khf-green) !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background: #09683a !important;
+  box-shadow: 0 7px 18px rgba(22, 134, 78, .2);
+  transform: translateY(-2px);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 13. FORMS AND INPUT FIELDS */
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  border: 1px solid #dce2ea;
+  border-radius: 7px;
+  padding: 11px 13px;
+  background: white;
+  color: var(--khf-text);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--khf-green);
+  box-shadow: 0 0 0 3px rgba(22, 134, 78, .12);
+}
+
+label {
+  font-weight: 700;
+  color: var(--khf-navy);
+}
+
+/* 14. FOOTER */
+
+.site-footer {
+  background: #0b1428 !important;
+  color: #dce4ef;
+  border-top: 5px solid var(--khf-green);
+  padding-top: 55px;
+}
 
 .site-footer h4 {
   color: white;
-  font-family: Georgia, "Times New Roman", serif;
+  margin-bottom: 16px;
+}
+
+.site-footer a {
+  color: #dce4ef;
+  text-decoration: none;
+  transition: color .2s ease;
 }
 
 .site-footer a:hover {
-  color: #39c77d;
+  color: #4ade80;
 }
 
-/* =====================================================
-   8. MOBILE RESPONSIVENESS
-   ===================================================== */
+/* 15. GENERAL SECTION SPACING */
+
+main > section {
+  scroll-margin-top: 90px;
+}
+
+main > section:not(:has(.hero-slide)) {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+/* 16. LINKS AND INTERACTIVE ELEMENTS */
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #16864e;
+  outline-offset: 3px;
+}
+
+/* 17. MOBILE DESIGN */
 
 @media (max-width: 767px) {
-  header .container-x > a img {
-    width: 58px !important;
-    height: 58px !important;
-  }
-
-  header nav a {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  main > section:has(.hero-slide) {
-    min-height: 82vh;
-  }
-
-  main > section:has(.hero-slide) > .container-x {
-    padding-top: 110px;
-    padding-bottom: 65px;
-  }
-
-  main > section:has(.hero-slide) h1 {
-    font-size: clamp(2.6rem, 12vw, 4rem);
-    letter-spacing: -1px;
+  .container-x {
+    width: 94%;
   }
 
   main > section:not(:has(.hero-slide)) {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
   }
 
   .card,
   .panel {
     border-radius: 10px;
   }
-}
 
-/* =====================================================
-   9. REDUCED MOTION ACCESSIBILITY
-   ===================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-slide,
-  .card,
   .fixture {
-    transition: none !important;
+    padding: 12px;
+  }
+
+  .table-mini {
+    font-size: 12px;
+  }
+
+  .table-mini th,
+  .table-mini td {
+    padding: 10px 7px;
+  }
+
+  .site-footer {
+    padding-top: 38px;
   }
 }
+
+/* 18. ANIMATIONS */
+
+@media (prefers-reduced-motion: no-preference) {
+  .card,
+  .panel,
+  .fixture,
+  main a.group {
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+}
+
+/* END OF KHF COMPLETE DESIGN UPGRADE */
